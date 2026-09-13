@@ -246,6 +246,50 @@ nav a:hover { color: var(--maroon); }
 .event-card .event-info a { color: #fff; font-weight: 700; font-size: 13.5px; }
 .event-card .event-info a::after { content: ' →'; }
 
+/* ===== BLOG ===== */
+.blog { padding: 90px 0; text-align: center; background: var(--gray); }
+.blog h2.two-tone { font-size: 34px; }
+.blog h2.two-tone .accent { color: var(--maroon); }
+.blog .divider { width: 60px; height: 4px; background: var(--orange); border-radius: 2px; margin: 14px auto 22px; }
+.blog .intro-copy { max-width: 640px; margin: 0 auto 44px; color: #55606b; line-height: 1.7; font-size: 15.5px; }
+.blog-list { display: flex; flex-direction: column; gap: 24px; text-align: left; }
+.blog-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(10, 61, 98, 0.1);
+  padding: 44px;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.blog-card.reverse { flex-direction: row-reverse; }
+.blog-card .blog-photo {
+  flex: 1;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  background: linear-gradient(135deg, #cfd8e3, #aab8c6);
+}
+.blog-card .blog-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.blog-card .blog-body { flex: 1; }
+.blog-card .blog-category { color: var(--maroon); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.blog-card h3 { font-size: 22px; margin: 12px 0; }
+.blog-card p { font-size: 14.5px; color: #55606b; line-height: 1.7; margin-bottom: 22px; }
+.blog-card a.read-more {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 11px 26px;
+  border-radius: 24px;
+}
+
 /* ===== CONTACT + FOOTER ===== */
 .contact { position: relative; min-height: 540px; overflow: hidden; }
 .contact-map {
@@ -348,6 +392,7 @@ footer::before {
   .showcase-main img { height: 300px; }
   .events-grid { grid-template-columns: 1fr; }
   .event-card { flex-direction: column; }
+  .blog-card, .blog-card.reverse { flex-direction: column; padding: 26px; gap: 20px; }
   .contact-card-float { margin: 0 16px; max-width: none; top: 40px; padding: 34px 26px; }
   .contact { min-height: 0; padding-bottom: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
