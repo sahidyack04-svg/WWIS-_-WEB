@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V5 · Hero + Filter Tabs — Blog | WWIS Trichy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<style>
+  .mock-tag{position:fixed;top:10px;right:10px;background:var(--maroon);color:#fff;font:700 12px/1 'Nunito',sans-serif;padding:8px 12px;border-radius:20px;z-index:999;letter-spacing:.05em}
+  .blog-hero{position:relative;min-height:440px;display:flex;align-items:center;background:linear-gradient(120deg, rgba(7,43,71,.92), rgba(10,61,98,.75)), url('../../assets/image/Hero-Section.webp') center/cover;color:#fff;}
+  .blog-hero .container{max-width:700px;}
+  .blog-hero .cat-chip{display:inline-block;background:var(--orange);color:var(--navy);font:800 11px 'Nunito',sans-serif;text-transform:uppercase;letter-spacing:.06em;padding:7px 14px;border-radius:20px;margin-bottom:18px;}
+  .blog-hero h1{font:800 40px/1.25 'Nunito',sans-serif;margin:0 0 16px;}
+  .blog-hero p{font-size:16px;line-height:1.7;opacity:.9;margin:0 0 26px;max-width:560px;}
+  .blog-hero .h-meta{font-size:13px;opacity:.75;margin-top:20px;}
+
+  .tabbar-wrap{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #eef1f4;}
+  .tab-row{display:flex;gap:6px;justify-content:center;padding:16px 0;flex-wrap:wrap;}
+  .ftab{border:none;background:transparent;color:#8a95a1;font:700 14px 'Nunito',sans-serif;padding:10px 18px;border-radius:8px;cursor:pointer;}
+  .ftab.active{background:var(--navy);color:#fff;}
+  .ftab:hover:not(.active){background:var(--gray);color:var(--navy);}
+
+  .cards-wrap{background:var(--gray);padding:50px 0 80px;}
+  .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .fcard{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(10,61,98,.07);transition:opacity .2s;}
+  .fcard img{width:100%;height:180px;object-fit:cover;display:block;}
+  .fc-body{padding:22px 24px;}
+  .fc-body .cat{font:800 11px 'Nunito',sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--maroon);display:block;margin-bottom:10px;}
+  .fc-body h3{font:700 17px/1.35 'Nunito',sans-serif;color:var(--navy);margin:0 0 10px;}
+  .fc-body p{font-size:13.5px;color:#5d6873;line-height:1.6;margin:0 0 14px;}
+  .fc-meta{font-size:12px;color:#9aa4ad;border-top:1px solid #eef1f4;padding-top:12px;display:flex;justify-content:space-between;}
+  .fc-meta a{color:var(--maroon);font-weight:700;text-decoration:none;}
+  .fcard.hidden{display:none;}
+</style>
+</head>
+<body>
+<div class="mock-tag">V5 · Hero + Filter Tabs</div>
+
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="../../index.html"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></a>
+    <nav><ul>
+      <li><a href="../../index.html#home">Home</a></li>
+      <li><a href="../../about-us.html">About Us</a></li>
+      <li><a href="../../programs.html">Programs</a></li>
+      <li><a href="../../index.html#gallery">Gallery</a></li>
+      <li><a href="../../index.html#events">Events</a></li>
+      <li><a href="#" style="color:var(--maroon);">Blog</a></li>
+      <li><a href="../../index.html#contact">Contact</a></li>
+    </ul></nav>
+    <a href="../../index.html#contact" class="btn btn-maroon">Reach Out to Us</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <span class="cat-chip">iPlay · Featured</span>
+    <h1>Learn, Play, Grow: The Motive of Our Circle Time</h1>
+    <p>Circle time is a structured daily activity that fosters social skills, language development, and a sense of community among our youngest learners — here's how it works, and why it happens every single morning.</p>
+    <a href="#" class="btn btn-maroon">Read the Full Story</a>
+    <div class="h-meta">By Mahalakshmi, iPlay Facilitator · March 24, 2026</div>
+  </div>
+</section>
+
+<div class="tabbar-wrap">
+  <div class="tab-row">
+    <button class="ftab active" data-filter="all">All Posts</button>
+    <button class="ftab" data-filter="iplay">iPlay</button>
+    <button class="ftab" data-filter="ilp">ILP</button>
+    <button class="ftab" data-filter="guidance">Guidance</button>
+    <button class="ftab" data-filter="newsletter">Newsletter</button>
+  </div>
+</div>
+
+<section class="cards-wrap">
+  <div class="container">
+    <div class="cards-grid">
+
+      <div class="fcard" data-cat="guidance">
+        <img src="../../assets/image/iLead.webp" alt="Career path">
+        <div class="fc-body">
+          <span class="cat">Guidance</span>
+          <h3>Are You Curious About Your Child's Career Path?</h3>
+          <p>Why career conversations should start in Grade 7, not Grade 12.</p>
+          <div class="fc-meta"><span>Uma · Mar 24, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="iplay">
+        <img src="../../assets/image/gallery01.webp" alt="Field trip">
+        <div class="fc-body">
+          <span class="cat">iPlay</span>
+          <h3>Why We Take iPlay Children on 16 Field Trips a Year</h3>
+          <p>Real-world exposure builds curiosity faster than any textbook.</p>
+          <div class="fc-meta"><span>Anitha · Mar 24, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="ilp">
+        <img src="../../assets/image/Welcome-Section.webp" alt="Growth story">
+        <div class="fc-body">
+          <span class="cat">ILP</span>
+          <h3>Discovering a Child's Strength: A Journey of Growth</h3>
+          <p>How one student's Individual Learning Plan revealed a passion no one expected.</p>
+          <div class="fc-meta"><span>Gayathri · Mar 23, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="ilp">
+        <img src="../../assets/image/gallery02.webp" alt="Beyond academics">
+        <div class="fc-body">
+          <span class="cat">ILP</span>
+          <h3>Unlocking Potential Beyond Academics</h3>
+          <p>Strength isn't always a grade — here's how we found one beyond the classroom.</p>
+          <div class="fc-meta"><span>WWIS Faculty · Mar 2, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="newsletter">
+        <img src="../../assets/image/gallery03.webp" alt="Newsletter">
+        <div class="fc-body">
+          <span class="cat">Newsletter</span>
+          <h3>Monthly Newsletter — November 2025</h3>
+          <p>Admissions updates, upcoming events, and campus highlights.</p>
+          <div class="fc-meta"><span>WWIS Trichy · Nov 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="newsletter">
+        <img src="../../assets/image/gallery04.webp" alt="Newsletter">
+        <div class="fc-body">
+          <span class="cat">Newsletter</span>
+          <h3>Monthly Newsletter — October 2025</h3>
+          <p>A recap of Term 2 activities, iDiscover project showcases, and PTM dates.</p>
+          <div class="fc-meta"><span>WWIS Trichy · Oct 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="newsletter">
+        <img src="../../assets/image/gallery05.webp" alt="Newsletter">
+        <div class="fc-body">
+          <span class="cat">Newsletter</span>
+          <h3>Monthly Newsletter — July 2025</h3>
+          <p>Term wrap-up, admissions calendar, and campus highlights.</p>
+          <div class="fc-meta"><span>WWIS Trichy · Jul 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="iplay">
+        <img src="../../assets/image/iplay.webp" alt="iPlay">
+        <div class="fc-body">
+          <span class="cat">iPlay</span>
+          <h3>Sound and Story Time in the iPlay Studio</h3>
+          <p>How rhythm and read-alouds build early language skills, one morning circle at a time.</p>
+          <div class="fc-meta"><span>Mahalakshmi · Mar 18, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="newsletter">
+        <img src="../../assets/image/gallery06.webp" alt="Newsletter">
+        <div class="fc-body">
+          <span class="cat">Newsletter</span>
+          <h3>Monthly Newsletter — June 2025</h3>
+          <p>Summer camp recap and new admissions open.</p>
+          <div class="fc-meta"><span>WWIS Trichy · Jun 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-chip"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></div>
+        <p>Wisdom Wealth International School — Cambridge (CIE) curriculum, Trichy.</p>
+      </div>
+      <div><h3>Contact Us</h3>
+        <div class="footer-contact-item"><div class="ic">&#9742;</div><p>+91 81246 48888</p></div>
+        <div class="footer-contact-item"><div class="ic">&#128205;</div><p>Trichy – 620 007</p></div>
+      </div>
+      <div><h3>Quick Links</h3>
+        <ul>
+          <li><a href="../../index.html#home">Home</a></li>
+          <li><a href="../../about-us.html">About Us</a></li>
+          <li><a href="../../programs.html">Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to be the first to know about our events and admissions.</p>
+        <input type="email" placeholder="Email">
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <span>© 2026 WWIS Trichy</span>
+      <span>All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.ftab').forEach(function(tab){
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.ftab').forEach(function(t){t.classList.remove('active');});
+    tab.classList.add('active');
+    var f = tab.getAttribute('data-filter');
+    document.querySelectorAll('.fcard').forEach(function(card){
+      card.classList.toggle('hidden', f !== 'all' && card.getAttribute('data-cat') !== f);
+    });
+  });
+});
+</script>
+</body>
+</html>

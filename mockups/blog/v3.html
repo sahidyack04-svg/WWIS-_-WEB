@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V3 · Storybook Timeline — Blog | WWIS Trichy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<style>
+  .mock-tag{position:fixed;top:10px;right:10px;background:var(--orange);color:var(--navy);font:800 12px/1 'Nunito',sans-serif;padding:8px 12px;border-radius:20px;z-index:999;letter-spacing:.05em}
+  .tl-wrap{padding:70px 0 90px;position:relative;}
+  .tl-intro{text-align:center;max-width:600px;margin:0 auto 60px;}
+  .timeline{position:relative;}
+  .timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(var(--navy),var(--orange));transform:translateX(-50%);}
+  .tl-row{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-bottom:70px;}
+  .tl-row.reverse{direction:rtl;}
+  .tl-row.reverse > *{direction:ltr;}
+  .tl-date{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--navy);color:#fff;font:800 12px/1 'Nunito',sans-serif;text-align:center;border-radius:50%;width:78px;height:78px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:4px solid #fff;box-shadow:0 4px 14px rgba(10,61,98,.25);z-index:5;}
+  .tl-date .day{font-size:20px;line-height:1;}
+  .tl-date .mon{font-size:10px;text-transform:uppercase;opacity:.85;letter-spacing:.05em;}
+  .tl-photo{border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(10,61,98,.12);}
+  .tl-photo img{width:100%;height:280px;object-fit:cover;display:block;}
+  .tl-text{padding:0 20px;}
+  .tl-cat{display:inline-block;font:800 11px 'Nunito',sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--maroon);margin-bottom:10px;}
+  .tl-text h2{font:800 26px/1.35 'Nunito',sans-serif;color:var(--navy);margin:0 0 14px;}
+  .tl-text p{color:#5d6873;line-height:1.75;margin:0 0 16px;}
+  .tl-author{font-size:13px;color:#9aa4ad;margin-bottom:18px;}
+  .tl-author b{color:#54606b;}
+  @media(max-width:860px){
+    .timeline::before{left:26px;}
+    .tl-row,.tl-row.reverse{grid-template-columns:1fr;direction:ltr;gap:20px;padding-left:60px;}
+    .tl-date{left:26px;top:0;transform:translate(-50%,0);width:56px;height:56px;}
+    .tl-text{padding:0;}
+  }
+</style>
+</head>
+<body>
+<div class="mock-tag">V3 · Storybook Timeline</div>
+
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="../../index.html"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></a>
+    <nav><ul>
+      <li><a href="../../index.html#home">Home</a></li>
+      <li><a href="../../about-us.html">About Us</a></li>
+      <li><a href="../../programs.html">Programs</a></li>
+      <li><a href="../../index.html#gallery">Gallery</a></li>
+      <li><a href="../../index.html#events">Events</a></li>
+      <li><a href="#" style="color:var(--maroon);">Blog</a></li>
+      <li><a href="../../index.html#contact">Contact</a></li>
+    </ul></nav>
+    <a href="../../index.html#contact" class="btn btn-maroon">Reach Out to Us</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <span class="section-label">Our Blog</span>
+    <h1>A Year, Told in Stories.</h1>
+    <p class="breadcrumb"><a href="../../index.html">Home</a> / Blog</p>
+  </div>
+</section>
+
+<section class="tl-wrap">
+  <div class="container">
+    <div class="tl-intro">
+      <p class="intro-copy">Every entry below is a moment from our classrooms — walked through chronologically, by the teachers and coordinators who were there.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-row">
+        <div class="tl-photo"><img src="../../assets/image/iplay.webp" alt="Circle time"></div>
+        <div class="tl-text">
+          <span class="tl-cat">iPlay</span>
+          <h2>Learn, Play, Grow: The Motive of Our Circle Time</h2>
+          <p>Circle time is a structured daily activity that fosters social skills, language development, and a sense of community among our youngest learners.</p>
+          <div class="tl-author">By <b>Mahalakshmi</b>, iPlay Facilitator</div>
+          <a href="#" class="btn btn-outline-navy">Read the Full Story</a>
+        </div>
+        <div class="tl-date"><span class="day">24</span><span class="mon">Mar '26</span></div>
+      </div>
+
+      <div class="tl-row reverse">
+        <div class="tl-photo"><img src="../../assets/image/iLead.webp" alt="Career guidance"></div>
+        <div class="tl-text">
+          <span class="tl-cat">Guidance</span>
+          <h2>Are You Curious About Your Child's Career Path?</h2>
+          <p>Career-planning conversations that start in Grade 7 — not Grade 12 — give students years of runway to explore, not just decide.</p>
+          <div class="tl-author">By <b>Uma</b>, Vice Principal</div>
+          <a href="#" class="btn btn-outline-navy">Read the Full Story</a>
+        </div>
+        <div class="tl-date"><span class="day">24</span><span class="mon">Mar '26</span></div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-photo"><img src="../../assets/image/gallery01.webp" alt="Field trip"></div>
+        <div class="tl-text">
+          <span class="tl-cat">iPlay</span>
+          <h2>Why We Take iPlay Children on 16 Field Trips a Year</h2>
+          <p>Real-world exposure builds curiosity faster than any textbook — here's the thinking behind every trip on the calendar.</p>
+          <div class="tl-author">By <b>Anitha</b>, iPlay Academic Coordinator</div>
+          <a href="#" class="btn btn-outline-navy">Read the Full Story</a>
+        </div>
+        <div class="tl-date"><span class="day">24</span><span class="mon">Mar '26</span></div>
+      </div>
+
+      <div class="tl-row reverse">
+        <div class="tl-photo"><img src="../../assets/image/Welcome-Section.webp" alt="Growth story"></div>
+        <div class="tl-text">
+          <span class="tl-cat">ILP</span>
+          <h2>Discovering a Child's Strength: A Journey of Growth and Transformation</h2>
+          <p>How Madhin's Individual Learning Plan uncovered a talent that changed how his whole classroom saw him.</p>
+          <div class="tl-author">By <b>Gayathri</b>, ILP Coordinator</div>
+          <a href="#" class="btn btn-outline-navy">Read the Full Story</a>
+        </div>
+        <div class="tl-date"><span class="day">23</span><span class="mon">Mar '26</span></div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-photo"><img src="../../assets/image/gallery02.webp" alt="Beyond academics"></div>
+        <div class="tl-text">
+          <span class="tl-cat">ILP</span>
+          <h2>Unlocking Potential: Beyond Academics</h2>
+          <p>Godwin's story is a reminder that strength isn't always visible on a report card.</p>
+          <div class="tl-author">By <b>WWIS Faculty</b></div>
+          <a href="#" class="btn btn-outline-navy">Read the Full Story</a>
+        </div>
+        <div class="tl-date"><span class="day">02</span><span class="mon">Mar '26</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-chip"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></div>
+        <p>Wisdom Wealth International School — Cambridge (CIE) curriculum, Trichy.</p>
+      </div>
+      <div><h3>Contact Us</h3>
+        <div class="footer-contact-item"><div class="ic">&#9742;</div><p>+91 81246 48888</p></div>
+        <div class="footer-contact-item"><div class="ic">&#128205;</div><p>Trichy – 620 007</p></div>
+      </div>
+      <div><h3>Quick Links</h3>
+        <ul>
+          <li><a href="../../index.html#home">Home</a></li>
+          <li><a href="../../about-us.html">About Us</a></li>
+          <li><a href="../../programs.html">Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to be the first to know about our events and admissions.</p>
+        <input type="email" placeholder="Email">
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <span>© 2026 WWIS Trichy</span>
+      <span>All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

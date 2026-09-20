@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Stories From WWIS Trichy | WWIS Trichy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .deck-wrap{background:var(--gray);padding:56px 0 30px;}
+  .deck-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+  .deck-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(10,61,98,.07);transition:transform .15s, box-shadow .15s;}
+  .deck-card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(10,61,98,.14);}
+  .deck-card .accent-bar{height:6px;}
+  .deck-card .d-photo{height:180px;overflow:hidden;}
+  .deck-card .d-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .deck-body{padding:22px 24px 26px;}
+  .d-cat{font:800 11px 'Nunito',sans-serif;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:block;}
+  .deck-card h3{font:700 18px/1.35 'Nunito',sans-serif;color:var(--navy);margin:0 0 10px;}
+  .deck-card p{font-size:14px;color:#5d6873;line-height:1.6;margin:0 0 16px;}
+  .d-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#9aa4ad;border-top:1px solid #eef1f4;padding-top:12px;}
+  .d-meta a{color:var(--maroon);font-weight:700;text-decoration:none;}
+  .pagination{display:flex;justify-content:center;gap:10px;padding:50px 0 70px;}
+  .pagination a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#fff;color:var(--navy);font-weight:700;text-decoration:none;box-shadow:0 2px 8px rgba(10,61,98,.08);}
+  .pagination a.active{background:var(--navy);color:#fff;}
+  @media(max-width:900px){.deck-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.deck-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="index.html"><img src="assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></a>
+    <nav>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#contact" class="btn btn-maroon">Reach Out to Us</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <span class="section-label">Our Blog</span>
+    <h1>Notes From Our Classrooms</h1>
+    <p class="breadcrumb"><a href="index.html">Home</a> / Blog</p>
+  </div>
+</section>
+
+<section class="deck-wrap">
+  <div class="container">
+    <div class="deck-grid">
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--navy);"></div>
+        <div class="d-photo"><img src="assets/image/iplay.webp" alt="Circle time"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:var(--navy);">iPlay</span>
+          <h3>Learn, Play, Grow: The Motive of Our Circle Time</h3>
+          <p>A structured daily ritual that fosters social skills, language and a sense of community.</p>
+          <div class="d-meta"><span>Mahalakshmi · Mar 24, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--maroon);"></div>
+        <div class="d-photo"><img src="assets/image/iLead.webp" alt="Career path"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:var(--maroon);">Guidance</span>
+          <h3>Are You Curious About Your Child's Career Path?</h3>
+          <p>Why career conversations should start in Grade 7, not Grade 12.</p>
+          <div class="d-meta"><span>Uma · Mar 24, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--orange);"></div>
+        <div class="d-photo"><img src="assets/image/gallery01.webp" alt="Field trip"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:#9a6a13;">iPlay</span>
+          <h3>Why We Take iPlay Children on 16 Field Trips a Year</h3>
+          <p>Real-world exposure builds curiosity faster than any textbook.</p>
+          <div class="d-meta"><span>Anitha · Mar 24, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--navy);"></div>
+        <div class="d-photo"><img src="assets/image/Welcome-Section.webp" alt="Growth story"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:var(--navy);">ILP</span>
+          <h3>Discovering a Child's Strength: A Journey of Growth</h3>
+          <p>How one student's Individual Learning Plan revealed a passion no one expected.</p>
+          <div class="d-meta"><span>Gayathri · Mar 23, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--maroon);"></div>
+        <div class="d-photo"><img src="assets/image/gallery02.webp" alt="Beyond academics"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:var(--maroon);">ILP</span>
+          <h3>Unlocking Potential Beyond Academics</h3>
+          <p>Strength isn't always a grade — here's how we found one beyond the classroom.</p>
+          <div class="d-meta"><span>WWIS Faculty · Mar 2, 2026</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--orange);"></div>
+        <div class="d-photo"><img src="assets/image/gallery03.webp" alt="Newsletter"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:#9a6a13;">Newsletter</span>
+          <h3>Monthly Newsletter — November 2025</h3>
+          <p>Admissions updates, upcoming events, and highlights from around campus.</p>
+          <div class="d-meta"><span>WWIS Trichy · Nov 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--navy);"></div>
+        <div class="d-photo"><img src="assets/image/gallery04.webp" alt="Newsletter"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:var(--navy);">Newsletter</span>
+          <h3>Monthly Newsletter — October 2025</h3>
+          <p>A recap of Term 2 activities, iDiscover project showcases, and PTM dates.</p>
+          <div class="d-meta"><span>WWIS Trichy · Oct 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--maroon);"></div>
+        <div class="d-photo"><img src="assets/image/gallery05.webp" alt="Newsletter"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:var(--maroon);">Newsletter</span>
+          <h3>Monthly Newsletter — July 2025</h3>
+          <p>Term wrap-up, admissions calendar, and campus highlights.</p>
+          <div class="d-meta"><span>WWIS Trichy · Jul 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <div class="accent-bar" style="background:var(--orange);"></div>
+        <div class="d-photo"><img src="assets/image/gallery06.webp" alt="Newsletter"></div>
+        <div class="deck-body">
+          <span class="d-cat" style="color:#9a6a13;">Newsletter</span>
+          <h3>Monthly Newsletter — June 2025</h3>
+          <p>Summer camp recap and new admissions open.</p>
+          <div class="d-meta"><span>WWIS Trichy · Jun 2025</span><a href="#">Read →</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">→</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-chip"><img src="assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></div>
+        <p>Wisdom Wealth International School — Cambridge (CIE) curriculum, Trichy.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85c.15-3.23 1.67-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.72 2.7 21.3.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3 3 0 0 0-2.11-2.12C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.39.57A3 3 0 0 0 .5 6.19 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.81 3 3 0 0 0 2.11 2.12C4.5 20.5 12 20.5 12 20.5s7.5 0 9.39-.57a3 3 0 0 0 2.11-2.12A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.81zM9.6 15.6V8.4l6.4 3.6z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <div class="footer-contact-item"><div class="ic">&#9742;</div><p>+91 81246 48888</p></div>
+        <div class="footer-contact-item"><div class="ic">&#128205;</div><p>Trichy – 620 007</p></div>
+        <div class="footer-contact-item"><div class="ic">&#128337;</div><p>Mon–Sat, 9–5:30</p></div>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to be the first to know about our events and admissions.</p>
+        <input type="email" placeholder="Email">
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <span>© 2026 WWIS Trichy</span>
+      <span>All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

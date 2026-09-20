@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V1 · Editorial + Sidebar — Blog | WWIS Trichy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<style>
+  .mock-tag{position:fixed;top:10px;right:10px;background:var(--navy);color:#fff;font:700 12px/1 'Nunito',sans-serif;padding:8px 12px;border-radius:20px;z-index:999;letter-spacing:.05em}
+  .blog-page-wrap{background:var(--gray);padding:60px 0 80px;}
+  .blog-layout{display:grid;grid-template-columns:1fr 320px;gap:44px;align-items:start;}
+  .featured-post{grid-column:1/-1;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(10,61,98,.08);display:grid;grid-template-columns:1.1fr 1fr;margin-bottom:8px;}
+  .featured-post img{width:100%;height:100%;object-fit:cover;display:block;min-height:260px;}
+  .featured-post .fp-body{padding:36px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .cat-chip{display:inline-block;font:700 11px/1 'Nunito',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:14px;width:fit-content;}
+  .cat-navy{background:rgba(10,61,98,.1);color:var(--navy);}
+  .cat-maroon{background:rgba(196,30,82,.1);color:var(--maroon);}
+  .cat-orange{background:rgba(242,169,59,.15);color:#9a6a13;}
+  .featured-post h2{font:800 26px/1.3 'Nunito',sans-serif;color:var(--navy);margin:0 0 12px;}
+  .featured-post p{color:#54606b;line-height:1.7;margin:0 0 18px;}
+  .post-meta{font-size:13px;color:#8a95a1;margin-bottom:6px;}
+  .post-meta b{color:#54606b;}
+  .article-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .post-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(10,61,98,.06);}
+  .post-card img{width:100%;height:170px;object-fit:cover;display:block;}
+  .post-card .pc-body{padding:22px 24px;}
+  .post-card h3{font:700 18px/1.35 'Nunito',sans-serif;color:var(--navy);margin:0 0 10px;}
+  .post-card p{color:#5d6873;font-size:14px;line-height:1.6;margin:0 0 14px;}
+  .read-more-link{color:var(--maroon);font-weight:700;font-size:14px;text-decoration:none;}
+  .sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:24px;}
+  .side-box{background:#fff;border-radius:14px;padding:24px;box-shadow:0 6px 18px rgba(10,61,98,.06);}
+  .side-box h4{font:800 15px/1 'Nunito',sans-serif;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;margin:0 0 16px;}
+  .search-box{display:flex;border:2px solid var(--gray);border-radius:10px;overflow:hidden;}
+  .search-box input{flex:1;border:0;padding:12px 14px;font-family:'Roboto',sans-serif;outline:none;}
+  .search-box button{border:0;background:var(--maroon);color:#fff;padding:0 16px;font-weight:700;cursor:pointer;}
+  .cat-list{list-style:none;margin:0;padding:0;}
+  .cat-list li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eef1f4;font-size:14px;color:#54606b;}
+  .cat-list li:last-child{border-bottom:0;}
+  .cat-list span{color:#aeb7c0;}
+  .recent-post{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #eef1f4;}
+  .recent-post:last-child{border-bottom:0;}
+  .recent-post img{width:56px;height:56px;border-radius:8px;object-fit:cover;flex-shrink:0;}
+  .recent-post h5{font:700 13.5px/1.4 'Nunito',sans-serif;color:var(--navy);margin:0 0 4px;}
+  .recent-post span{font-size:12px;color:#9aa4ad;}
+  .nl-box{background:var(--navy);color:#fff;}
+  .nl-box h4{color:#fff;}
+  .nl-box p{font-size:13.5px;line-height:1.6;opacity:.85;margin:0 0 16px;}
+  .nl-box input{width:100%;padding:11px 12px;border-radius:8px;border:0;margin-bottom:10px;font-family:'Roboto',sans-serif;}
+  .nl-box button{width:100%;padding:11px;border-radius:8px;border:0;background:var(--orange);color:var(--navy);font-weight:800;cursor:pointer;}
+  @media(max-width:900px){.blog-layout{grid-template-columns:1fr;}.featured-post{grid-template-columns:1fr;}.article-grid{grid-template-columns:1fr;}.sidebar{position:static;}}
+</style>
+</head>
+<body>
+<div class="mock-tag">V1 · Editorial + Sidebar</div>
+
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="../../index.html"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></a>
+    <nav><ul>
+      <li><a href="../../index.html#home">Home</a></li>
+      <li><a href="../../about-us.html">About Us</a></li>
+      <li><a href="../../programs.html">Programs</a></li>
+      <li><a href="../../index.html#gallery">Gallery</a></li>
+      <li><a href="../../index.html#events">Events</a></li>
+      <li><a href="#" style="color:var(--maroon);">Blog</a></li>
+      <li><a href="../../index.html#contact">Contact</a></li>
+    </ul></nav>
+    <a href="../../index.html#contact" class="btn btn-maroon">Reach Out to Us</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <span class="section-label">Our Blog</span>
+    <h1>Stories From WWIS Trichy</h1>
+    <p class="breadcrumb"><a href="../../index.html">Home</a> / Blog</p>
+  </div>
+</section>
+
+<section class="blog-page-wrap">
+  <div class="container blog-layout">
+
+    <article class="featured-post">
+      <img src="../../assets/image/iplay.webp" alt="Circle time at WWIS iPlay">
+      <div class="fp-body">
+        <span class="cat-chip cat-navy">iPlay</span>
+        <div class="post-meta">Mar 24, 2026 · By <b>Mahalakshmi</b>, iPlay Facilitator</div>
+        <h2>Learn, Play, Grow: The Motive of Our Circle Time</h2>
+        <p>Circle time is a structured daily activity that fosters social skills, language development, and a sense of community among our youngest learners — here's how it works.</p>
+        <a href="#" class="read-more-link">Read More →</a>
+      </div>
+    </article>
+
+    <div class="article-grid">
+      <div class="post-card">
+        <img src="../../assets/image/iLead.webp" alt="Career guidance session">
+        <div class="pc-body">
+          <span class="cat-chip cat-maroon">Guidance</span>
+          <h3>Are You Curious About Your Child's Career Path?</h3>
+          <p>Why career-planning conversations should begin as early as Grade 7, and how our counsellors guide the way.</p>
+          <div class="post-meta">Mar 24, 2026 · Uma, Vice Principal</div>
+        </div>
+      </div>
+      <div class="post-card">
+        <img src="../../assets/image/gallery01.webp" alt="Field trip">
+        <div class="pc-body">
+          <span class="cat-chip cat-navy">iPlay</span>
+          <h3>Why We Take iPlay Children on 16 Field Trips a Year</h3>
+          <p>Real-world exposure builds curiosity faster than any textbook — a look at our field trip philosophy.</p>
+          <div class="post-meta">Mar 24, 2026 · Anitha, iPlay Coordinator</div>
+        </div>
+      </div>
+      <div class="post-card">
+        <img src="../../assets/image/Welcome-Section.webp" alt="Student growth story">
+        <div class="pc-body">
+          <span class="cat-chip cat-orange">ILP</span>
+          <h3>Discovering a Child's Strength: A Journey of Growth</h3>
+          <p>How one student's Individual Learning Plan revealed a passion no one expected — including him.</p>
+          <div class="post-meta">Mar 23, 2026 · Gayathri, ILP Coordinator</div>
+        </div>
+      </div>
+      <div class="post-card">
+        <img src="../../assets/image/gallery02.webp" alt="Beyond academics">
+        <div class="pc-body">
+          <span class="cat-chip cat-orange">ILP</span>
+          <h3>Unlocking Potential Beyond Academics</h3>
+          <p>Strength isn't always a grade. Here's how we found and nurtured one beyond the classroom.</p>
+          <div class="post-meta">Mar 2, 2026 · WWIS Faculty</div>
+        </div>
+      </div>
+      <div class="post-card">
+        <img src="../../assets/image/gallery03.webp" alt="Newsletter">
+        <div class="pc-body">
+          <span class="cat-chip cat-maroon">Newsletter</span>
+          <h3>Monthly Newsletter — November 2025</h3>
+          <p>Admissions updates, upcoming events, and highlights from around campus this month.</p>
+          <div class="post-meta">Nov 2025 · WWIS Trichy</div>
+        </div>
+      </div>
+      <div class="post-card">
+        <img src="../../assets/image/gallery04.webp" alt="Newsletter">
+        <div class="pc-body">
+          <span class="cat-chip cat-maroon">Newsletter</span>
+          <h3>Monthly Newsletter — October 2025</h3>
+          <p>A recap of Term 2 activities, iDiscover project showcases, and parent-teacher meet dates.</p>
+          <div class="post-meta">Oct 2025 · WWIS Trichy</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="side-box">
+        <h4>Search</h4>
+        <div class="search-box"><input type="text" placeholder="Search articles…"><button>Go</button></div>
+      </div>
+      <div class="side-box">
+        <h4>Categories</h4>
+        <ul class="cat-list">
+          <li>iPlay <span>4</span></li>
+          <li>ILP <span>3</span></li>
+          <li>Guidance <span>2</span></li>
+          <li>Newsletter <span>5</span></li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <h4>Recent Posts</h4>
+        <div class="recent-post"><img src="../../assets/image/iplay.webp" alt=""><div><h5>Learn, Play, Grow: Circle Time</h5><span>Mar 24, 2026</span></div></div>
+        <div class="recent-post"><img src="../../assets/image/iLead.webp" alt=""><div><h5>Curious About Career Paths?</h5><span>Mar 24, 2026</span></div></div>
+        <div class="recent-post"><img src="../../assets/image/gallery01.webp" alt=""><div><h5>16 Field Trips a Year</h5><span>Mar 24, 2026</span></div></div>
+      </div>
+      <div class="side-box nl-box">
+        <h4>Get Our Newsletter</h4>
+        <p>Monthly updates on admissions, events and student stories — straight to your inbox.</p>
+        <input type="email" placeholder="Email address">
+        <button>Subscribe</button>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-chip"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></div>
+        <p>Wisdom Wealth International School — Cambridge (CIE) curriculum, Trichy.</p>
+      </div>
+      <div><h3>Contact Us</h3>
+        <div class="footer-contact-item"><div class="ic">&#9742;</div><p>+91 81246 48888</p></div>
+        <div class="footer-contact-item"><div class="ic">&#128205;</div><p>Trichy – 620 007</p></div>
+      </div>
+      <div><h3>Quick Links</h3>
+        <ul>
+          <li><a href="../../index.html#home">Home</a></li>
+          <li><a href="../../about-us.html">About Us</a></li>
+          <li><a href="../../programs.html">Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to be the first to know about our events and admissions.</p>
+        <input type="email" placeholder="Email">
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <span>© 2026 WWIS Trichy</span>
+      <span>All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
