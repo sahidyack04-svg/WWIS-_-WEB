@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V4 — Icon Card Grid | Nav Dropdown Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<style>
+  body { background: var(--gray); }
+  .mock-label { text-align: center; padding: 30px 0 10px; }
+  .mock-label span { background: var(--navy); color: #fff; font-family:'Nunito',sans-serif; font-weight:800; font-size: 13px; letter-spacing: .05em; padding: 8px 20px; border-radius: 20px; }
+  .stage { max-width: 1180px; margin: 40px auto 100px; padding: 0 32px; display: flex; flex-direction: column; gap: 50px; align-items: center; }
+  .panel-wrap { text-align: center; }
+  .panel-wrap h4 { font-family: 'Nunito', sans-serif; color: var(--navy); margin-bottom: 16px; font-size: 15px; }
+
+  /* V4: 2x2 grid of mini cards, icon circle + title + one-liner */
+  .v4-menu {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    background: #fff; border-radius: 18px; padding: 18px;
+    box-shadow: 0 24px 50px rgba(10, 61, 98, 0.2); list-style: none; margin: 0;
+  }
+  .v4-menu li { padding: 0; }
+  .v4-card {
+    display: block; width: 210px; background: var(--gray); border-radius: 14px; padding: 18px 16px;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .v4-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(10,61,98,.12); background: #fff; }
+  .v4-circle {
+    width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: #fff; margin-bottom: 12px;
+  }
+  .v4-card h5 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px; color: var(--navy); margin: 0 0 4px; }
+  .v4-card span { font-size: 11.5px; color: #8b96a1; line-height: 1.4; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="#"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="has-dropdown"><a href="#">About Us</a></li>
+        <li class="has-dropdown"><a href="#">Programs</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn btn-maroon">Reach Out to Us</a>
+  </div>
+</header>
+
+<div class="mock-label"><span>V4 — ICON CARD GRID (2x2)</span></div>
+
+<div class="stage">
+  <div class="panel-wrap">
+    <h4>About Us dropdown</h4>
+    <ul class="v4-menu">
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--navy);">&#128218;</div><h5>Teaching Methodology</h5><span>Child-centric &amp; child-led</span></a></li>
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--maroon);">&#127891;</div><h5>Our Syllabus</h5><span>Cambridge CIE</span></a></li>
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--orange);">&#128337;</div><h5>Daily Activities</h5><span>A day in our classrooms</span></a></li>
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--navy);">&#127942;</div><h5>Student Achievements</h5><span>Celebrating every win</span></a></li>
+    </ul>
+  </div>
+  <div class="panel-wrap">
+    <h4>Programs dropdown</h4>
+    <ul class="v4-menu">
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--navy);">&#129528;</div><h5>iPlay</h5><span>Pre-KG &ndash; Grade 2</span></a></li>
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--maroon);">&#128301;</div><h5>iDiscover</h5><span>Grade 3 &ndash; Grade 7</span></a></li>
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--orange);">&#128640;</div><h5>iLead</h5><span>Grade 8 &ndash; Grade 12</span></a></li>
+      <li><a href="#" class="v4-card"><div class="v4-circle" style="background:var(--navy);">&#127919;</div><h5>ILP</h5><span>Individual Learning Plan</span></a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

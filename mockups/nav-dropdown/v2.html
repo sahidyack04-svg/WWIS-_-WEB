@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V2 — Mega Menu | Nav Dropdown Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<style>
+  body { background: var(--gray); }
+  .mock-label { text-align: center; padding: 30px 0 10px; }
+  .mock-label span { background: var(--navy); color: #fff; font-family:'Nunito',sans-serif; font-weight:800; font-size: 13px; letter-spacing: .05em; padding: 8px 20px; border-radius: 20px; }
+  .stage { max-width: 1180px; margin: 40px auto 100px; padding: 0 32px; display: flex; flex-direction: column; gap: 50px; align-items: center; }
+  .panel-wrap { text-align: center; width: 100%; max-width: 560px; }
+  .panel-wrap h4 { font-family: 'Nunito', sans-serif; color: var(--navy); margin-bottom: 16px; font-size: 15px; }
+
+  /* V2: mega menu, icon + title + description, 2 columns */
+  .v2-menu {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px;
+    background: #fff; border-radius: 16px; padding: 16px;
+    box-shadow: 0 24px 50px rgba(10, 61, 98, 0.2); list-style: none; margin: 0; text-align: left;
+  }
+  .v2-menu li { padding: 0; }
+  .v2-menu a { display: flex; gap: 12px; align-items: flex-start; padding: 14px; border-radius: 10px; }
+  .v2-menu a:hover { background: var(--gray); }
+  .v2-ic { width: 36px; height: 36px; border-radius: 10px; background: var(--gray); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+  .v2-menu a:hover .v2-ic { background: var(--orange); }
+  .v2-title { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13.5px; color: var(--navy); display: block; margin-bottom: 3px; }
+  .v2-desc { font-size: 12px; color: #8b96a1; line-height: 1.4; display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="#"><img src="../../assets/Logo/wwis-logo.svg" alt="WWIS Trichy logo"></a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="has-dropdown"><a href="#">About Us</a></li>
+        <li class="has-dropdown"><a href="#">Programs</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn btn-maroon">Reach Out to Us</a>
+  </div>
+</header>
+
+<div class="mock-label"><span>V2 — MEGA MENU (ICON + DESCRIPTION)</span></div>
+
+<div class="stage">
+  <div class="panel-wrap">
+    <h4>About Us dropdown</h4>
+    <ul class="v2-menu">
+      <li><a href="#"><span class="v2-ic">&#128218;</span><span><span class="v2-title">Teaching Methodology</span><span class="v2-desc">Child-centric, child-led learning</span></span></a></li>
+      <li><a href="#"><span class="v2-ic">&#127891;</span><span><span class="v2-title">Our Syllabus (Cambridge CIE)</span><span class="v2-desc">IGCSE, AS &amp; A Level</span></span></a></li>
+      <li><a href="#"><span class="v2-ic">&#128337;</span><span><span class="v2-title">Daily Activities</span><span class="v2-desc">A day inside our classrooms</span></span></a></li>
+      <li><a href="#"><span class="v2-ic">&#127942;</span><span><span class="v2-title">Student Achievements</span><span class="v2-desc">Celebrating every win</span></span></a></li>
+    </ul>
+  </div>
+  <div class="panel-wrap">
+    <h4>Programs dropdown</h4>
+    <ul class="v2-menu">
+      <li><a href="#"><span class="v2-ic">&#129528;</span><span><span class="v2-title">iPlay</span><span class="v2-desc">Pre-KG &ndash; Grade 2</span></span></a></li>
+      <li><a href="#"><span class="v2-ic">&#128301;</span><span><span class="v2-title">iDiscover</span><span class="v2-desc">Grade 3 &ndash; Grade 7</span></span></a></li>
+      <li><a href="#"><span class="v2-ic">&#128640;</span><span><span class="v2-title">iLead</span><span class="v2-desc">Grade 8 &ndash; Grade 12</span></span></a></li>
+      <li><a href="#"><span class="v2-ic">&#127919;</span><span><span class="v2-title">ILP</span><span class="v2-desc">Personalized for every child</span></span></a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
