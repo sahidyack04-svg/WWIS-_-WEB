@@ -215,7 +215,7 @@ li.has-dropdown:focus-within > .dropdown-menu { opacity: 1; visibility: visible;
 .gallery .intro-copy { max-width: 640px; margin: 0 auto 44px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; font-size: 15.5px; }
 
 .showcase-main { border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); margin-bottom: 20px; position: relative; }
-.showcase-main img { width: 100%; height: 460px; object-fit: cover; display: block; }
+.showcase-main img { width: 100%; height: 600px; object-fit: cover; display: block; transition: opacity 0.25s ease; }
 .showcase-caption {
   position: absolute;
   left: 20px;
@@ -229,7 +229,7 @@ li.has-dropdown:focus-within > .dropdown-menu { opacity: 1; visibility: visible;
   font-size: 14px;
 }
 
-.showcase-thumbs { display: grid; grid-template-columns: repeat(9, 1fr); gap: 10px; }
+.showcase-thumbs { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
 .showcase-thumb {
   border-radius: 10px;
   overflow: hidden;
@@ -474,7 +474,7 @@ footer::before {
   .feature-block h2 { font-size: 30px; }
   .programs-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .showcase-thumbs { grid-template-columns: repeat(3, 1fr); }
+  .showcase-thumbs { grid-template-columns: repeat(4, 1fr); }
   .showcase-main img { height: 300px; }
   .events-grid { grid-template-columns: 1fr; }
   .event-card { flex-direction: column; }
