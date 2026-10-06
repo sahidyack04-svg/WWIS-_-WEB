@@ -1,2 +1,8 @@
 .superpowers/
 .mockups/
+
+.vercel
+.env*
+
+image floder/
+desktop.ini
