@@ -214,8 +214,8 @@ li.has-dropdown:focus-within > .dropdown-menu { opacity: 1; visibility: visible;
 .gallery .divider { width: 60px; height: 4px; background: var(--orange); border-radius: 2px; margin: 14px auto 22px; }
 .gallery .intro-copy { max-width: 640px; margin: 0 auto 44px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; font-size: 15.5px; }
 
-.showcase-main { border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); margin-bottom: 20px; position: relative; }
-.showcase-main img { width: 100%; height: 600px; object-fit: cover; display: block; transition: opacity 0.25s ease; }
+.showcase-main { border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); margin-bottom: 20px; position: relative; background: var(--gray); }
+.showcase-main img { width: 100%; height: 600px; object-fit: contain; background: var(--gray); display: block; transition: opacity 0.25s ease; }
 .showcase-caption {
   position: absolute;
   left: 20px;
@@ -229,16 +229,16 @@ li.has-dropdown:focus-within > .dropdown-menu { opacity: 1; visibility: visible;
   font-size: 14px;
 }
 
-.showcase-thumbs { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+.showcase-thumbs { display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; }
 .showcase-thumb {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   border: 3px solid transparent;
   padding: 0;
-  background: none;
+  background: var(--gray);
 }
-.showcase-thumb img { width: 100%; height: 68px; object-fit: cover; display: block; opacity: 0.6; transition: opacity 0.2s; }
+.showcase-thumb img { width: 100%; height: 68px; object-fit: contain; background: var(--gray); display: block; opacity: 0.6; transition: opacity 0.2s; }
 .showcase-thumb.active, .showcase-thumb:hover { border-color: var(--orange); }
 .showcase-thumb.active img, .showcase-thumb:hover img { opacity: 1; }
 
@@ -260,8 +260,10 @@ li.has-dropdown:focus-within > .dropdown-menu { opacity: 1; visibility: visible;
   font-size: 13px;
   background: linear-gradient(135deg, #cfd8e3, #aab8c6);
 }
+.event-card .event-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .event-card .event-info { flex: 1; padding: 26px 24px; color: #fff; display: flex; flex-direction: column; justify-content: center; }
 .event-card .event-info h3 { font-size: 19px; margin-bottom: 12px; }
+.event-card .event-info p { font-size: 14px; line-height: 1.6; opacity: 0.95; margin-bottom: 16px; }
 .event-card .event-info .date { font-size: 13.5px; opacity: 0.9; margin-bottom: 4px; }
 .event-card .event-info .time { font-size: 13.5px; opacity: 0.9; margin-bottom: 16px; display: block; }
 .event-card .event-info a { color: #fff; font-weight: 700; font-size: 13.5px; }
