@@ -446,8 +446,21 @@ footer::before {
 .storybook-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .storybook-row.reverse { flex-direction: row-reverse; }
 .storybook-photo { flex: 1; }
-.storybook-photo .photo-frame { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(10, 61, 98, 0.15); background: var(--gray); }
-.storybook-photo img { width: 100%; height: 340px; object-fit: contain; display: block; }
+.storybook-photo .photo-frame { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(10, 61, 98, 0.15); }
+.storybook-photo img { width: 100%; height: 340px; object-fit: cover; object-position: center; display: block; }
+
+/* Taller portrait photos: keep faces/heads in frame instead of cropping to the vertical center */
+#act-ilp .storybook-photo img,
+#act-pbl .storybook-photo img,
+#language-hour .storybook-photo img,
+#smart-moves .storybook-photo img,
+#nature-time .storybook-photo img,
+#pbl .storybook-photo img,
+#creative-challenge .storybook-photo img,
+#iplay-routine .storybook-photo img,
+#iplay-teachers .storybook-photo img {
+  object-position: top;
+}
 .storybook-text { flex: 1; }
 .storybook-text h2.two-tone { font-size: 30px; margin-bottom: 16px; line-height: 1.2; }
 .storybook-text h2.two-tone .navy-t { color: var(--navy); }
