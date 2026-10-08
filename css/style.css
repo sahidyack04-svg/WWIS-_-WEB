@@ -446,8 +446,8 @@ footer::before {
 .storybook-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .storybook-row.reverse { flex-direction: row-reverse; }
 .storybook-photo { flex: 1; }
-.storybook-photo .photo-frame { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(10, 61, 98, 0.15); }
-.storybook-photo img { width: 100%; height: 340px; object-fit: cover; display: block; }
+.storybook-photo .photo-frame { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(10, 61, 98, 0.15); background: var(--gray); }
+.storybook-photo img { width: 100%; height: 340px; object-fit: contain; display: block; }
 .storybook-text { flex: 1; }
 .storybook-text h2.two-tone { font-size: 30px; margin-bottom: 16px; line-height: 1.2; }
 .storybook-text h2.two-tone .navy-t { color: var(--navy); }
