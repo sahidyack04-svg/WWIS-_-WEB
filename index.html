@@ -35,7 +35,7 @@
           </ul>
         </li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="our-team.html">Our Team</a></li>
         <li><a href="career.html">Career</a></li>
@@ -74,7 +74,7 @@
   <div class="container welcome-grid">
     <div class="welcome-photo">
       <div class="photo-frame">
-        <img src="assets/image/Welcome-Section.webp" alt="WWIS teacher and student exploring individual learning">
+        <img class="ph" src="assets/image/Welcome-Section.webp" alt="WWIS teacher and student exploring individual learning">
       </div>
     </div>
     <div class="welcome-text">
@@ -101,7 +101,7 @@
 
     <div class="programs-grid">
       <div class="program-card">
-        <div class="program-photo"><img src="assets/image/iPlay-home.jpg" alt="iPlay students exploring and playing"></div>
+        <div class="program-photo"><img class="ph" src="assets/image/iPlay-home.jpg" alt="iPlay students exploring and playing"></div>
         <div class="program-bar" style="background:var(--navy);">
           <h3>iPlay · Pre-KG–Grade 2</h3>
           <p>Focuses on brain development.</p>
@@ -109,7 +109,7 @@
         </div>
       </div>
       <div class="program-card">
-        <div class="program-photo"><img src="assets/image/iDiscover-home.jpeg" alt="iDiscover student and teacher activity"></div>
+        <div class="program-photo"><img class="ph" src="assets/image/iDiscover-home.jpeg" alt="iDiscover student and teacher activity"></div>
         <div class="program-bar" style="background:var(--maroon);">
           <h3>iDiscover · Grade 3–7</h3>
           <p>Discovering passion.</p>
@@ -117,7 +117,7 @@
         </div>
       </div>
       <div class="program-card">
-        <div class="program-photo"><img src="assets/image/iLead-home.jpeg" alt="iLead students working on a project"></div>
+        <div class="program-photo"><img class="ph" src="assets/image/home-stage3-ilead.jpg" alt="iLead student conducting a hands-on science experiment"></div>
         <div class="program-bar" style="background:var(--orange);">
           <h3 style="color:var(--navy);">iLead · Grade 8–12</h3>
           <p style="color:var(--navy);">Launch your career.</p>
@@ -136,34 +136,34 @@
     <p class="intro-copy">Beyond textbooks and exams, we prepare students for real-world learning through hands-on experiences.</p>
 
     <div class="showcase-main">
-      <img id="galleryMainImg" src="assets/image/gallery-sand-play.webp" alt="Young students digging together in the sand pit">
+      <img id="galleryMainImg" class="ph" src="assets/image/gallery-sand-play.webp" alt="Young students digging together in the sand pit">
       <span class="showcase-caption" id="galleryCaption">iPlay · Sensory Sand Play</span>
     </div>
 
     <div class="showcase-thumbs">
       <button class="showcase-thumb active" onclick="setGalleryImage('assets/image/gallery-sand-play.webp','iPlay · Sensory Sand Play', this)">
-        <img src="assets/image/gallery-sand-play.webp" alt="Young students digging together in the sand pit" loading="lazy">
+        <img class="ph" src="assets/image/gallery-sand-play.webp" alt="Young students digging together in the sand pit" loading="lazy">
       </button>
       <button class="showcase-thumb" onclick="setGalleryImage('assets/image/gallery-microscope.webp','Science Lab · Microscopy', this)">
-        <img src="assets/image/gallery-microscope.webp" alt="Two students examining a slide under a microscope" loading="lazy">
+        <img class="ph" src="assets/image/gallery-microscope.webp" alt="Two students examining a slide under a microscope" loading="lazy">
       </button>
       <button class="showcase-thumb" onclick="setGalleryImage('assets/image/gallery-chem-lab.webp','Chemistry Lab', this)">
-        <img src="assets/image/gallery-chem-lab.webp" alt="Student performing a titration in the chemistry lab" loading="lazy">
+        <img class="ph" src="assets/image/gallery-chem-lab.webp" alt="Student performing a titration in the chemistry lab" loading="lazy">
       </button>
       <button class="showcase-thumb" onclick="setGalleryImage('assets/image/gallery-makerspace.webp','Makerspace', this)">
-        <img src="assets/image/gallery-makerspace.webp" alt="Student painting a woodwork project in the makerspace" loading="lazy">
+        <img class="ph" src="assets/image/gallery-makerspace.webp" alt="Student painting a woodwork project in the makerspace" loading="lazy">
       </button>
       <button class="showcase-thumb" onclick="setGalleryImage('assets/image/gallery-coding.webp','Programming', this)">
-        <img src="assets/image/gallery-coding.webp" alt="Students coding on laptops" loading="lazy">
+        <img class="ph" src="assets/image/gallery-coding.webp" alt="Students coding on laptops" loading="lazy">
       </button>
       <button class="showcase-thumb" onclick="setGalleryImage('assets/image/gallery-mentoring.webp','iLead · Mentorship', this)">
-        <img src="assets/image/gallery-mentoring.webp" alt="Teacher mentoring a small group of students" loading="lazy">
+        <img class="ph" src="assets/image/gallery-mentoring.webp" alt="Teacher mentoring a small group of students" loading="lazy">
       </button>
       <button class="showcase-thumb" onclick="setGalleryImage('assets/image/gallery-bharatanatyam.webp','Performing Arts · Bharatanatyam', this)">
-        <img src="assets/image/gallery-bharatanatyam.webp" alt="Student performing Bharatanatyam on stage" loading="lazy">
+        <img class="ph" src="assets/image/gallery-bharatanatyam.webp" alt="Student performing Bharatanatyam on stage" loading="lazy">
       </button>
       <button class="showcase-thumb" onclick="setGalleryImage('assets/image/gallery-imaginative-play.jpeg','iPlay · Imaginative Play', this)">
-        <img src="assets/image/gallery-imaginative-play.jpeg" alt="Students playing inside an imaginative play tent" loading="lazy">
+        <img class="ph" src="assets/image/gallery-imaginative-play.jpeg" alt="Students playing inside an imaginative play tent" loading="lazy">
       </button>
     </div>
   </div>
@@ -196,6 +196,9 @@
         </div>
       </div>
     </div>
+    <div class="btns" style="display:flex; justify-content:center; margin-top:36px;">
+      <a href="events.html" class="btn btn-maroon">View All Events</a>
+    </div>
   </div>
 </section>
 
@@ -214,7 +217,7 @@
           <p>A look at how ILPs help every child learn at their own pace, in their own way.</p>
           <a href="blog.html" class="read-more">Read More</a>
         </div>
-        <div class="blog-photo"><img src="assets/image/blog-home-ilp.png" alt="Students working on their individual learning plans"></div>
+        <div class="blog-photo"><img class="ph" src="assets/image/blog-home-ilp.png" alt="Students working on their individual learning plans"></div>
       </div>
       <div class="blog-card reverse">
         <div class="blog-body">
@@ -223,7 +226,7 @@
           <p>What sets an internationally recognized curriculum apart for young learners.</p>
           <a href="blog.html" class="read-more">Read More</a>
         </div>
-        <div class="blog-photo"><img src="assets/image/blog-home-cambridge-cie.png" alt="Students conducting a science experiment as part of the Cambridge curriculum"></div>
+        <div class="blog-photo"><img class="ph" src="assets/image/blog-home-cambridge-cie.png" alt="Students conducting a science experiment as part of the Cambridge curriculum"></div>
       </div>
     </div>
   </div>
@@ -239,7 +242,8 @@
   <div class="contact-card-float">
     <span class="section-label">Reach Out to Us!</span>
     <h2>Let's talk about your child's next school.</h2>
-    <div class="contact-row"><div class="ic">&#9742;</div><p>+91 81246 48888</p></div>
+    <div class="contact-row"><div class="ic">&#9742;</div><p><a href="tel:+918124648888" style="color:inherit;text-decoration:none;">+91 81246 48888</a></p></div>
+    <div class="contact-row"><div class="ic">&#9742;</div><p><a href="tel:+918336012345" style="color:inherit;text-decoration:none;">+91 83360 12345</a></p></div>
     <div class="contact-row"><div class="ic">&#128205;</div><p>11th Sector, 18th Cross, Morais City, Near Airport, Trichy – 620 007</p></div>
     <div class="contact-row"><div class="ic">&#128337;</div><p>Mon–Sat, 9 AM–5:30 PM</p></div>
     <div class="btns">
@@ -263,7 +267,8 @@
       </div>
       <div>
         <h3>Contact Us</h3>
-        <div class="footer-contact-item"><div class="ic">&#9742;</div><p>+91 81246 48888</p></div>
+        <div class="footer-contact-item"><div class="ic">&#9742;</div><p><a href="tel:+918124648888" style="color:inherit;text-decoration:none;">+91 81246 48888</a></p></div>
+        <div class="footer-contact-item"><div class="ic">&#9742;</div><p><a href="tel:+918336012345" style="color:inherit;text-decoration:none;">+91 83360 12345</a></p></div>
         <div class="footer-contact-item"><div class="ic">&#128205;</div><p>Trichy – 620 007</p></div>
         <div class="footer-contact-item"><div class="ic">&#128337;</div><p>Mon–Sat, 9–5:30</p></div>
       </div>
@@ -274,7 +279,7 @@
           <li><a href="about-us.html">About Us</a></li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#events">Events</a></li>
+          <li><a href="events.html">Events</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="our-team.html">Our Team</a></li>
           <li><a href="career.html">Career</a></li>

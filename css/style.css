@@ -9,6 +9,9 @@
 
 * { box-sizing: border-box; }
 
+/* Subtle, natural brightness/clarity polish for real photos (not posters/graphics/logos) */
+img.ph { filter: brightness(1.06) contrast(1.04) saturate(1.03); }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -260,7 +263,7 @@ li.has-dropdown:focus-within > .dropdown-menu { opacity: 1; visibility: visible;
   font-size: 13px;
   background: linear-gradient(135deg, #cfd8e3, #aab8c6);
 }
-.event-card .event-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.event-card .event-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .event-card .event-info { flex: 1; padding: 26px 24px; color: #fff; display: flex; flex-direction: column; justify-content: center; }
 .event-card .event-info h3 { font-size: 19px; margin-bottom: 12px; }
 .event-card .event-info p { font-size: 14px; line-height: 1.6; opacity: 0.95; margin-bottom: 16px; }
@@ -268,6 +271,25 @@ li.has-dropdown:focus-within > .dropdown-menu { opacity: 1; visibility: visible;
 .event-card .event-info .time { font-size: 13.5px; opacity: 0.9; margin-bottom: 16px; display: block; }
 .event-card .event-info a { color: #fff; font-weight: 700; font-size: 13.5px; }
 .event-card .event-info a::after { content: ' →'; }
+
+/* ===== EVENTS DETAIL PAGE ===== */
+.events-detail { padding: 90px 0; text-align: center; background: #fff; }
+.events-detail h2.two-tone { font-size: 34px; }
+.events-detail h2.two-tone .accent { color: var(--maroon); }
+.events-detail .divider { width: 60px; height: 4px; background: var(--orange); border-radius: 2px; margin: 14px auto 22px; }
+.events-detail .intro-copy { max-width: 640px; margin: 0 auto 44px; color: #55606b; line-height: 1.7; font-size: 15.5px; }
+.events-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; text-align: left; }
+.event-poster-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(10, 61, 98, 0.12); }
+.event-poster-card .poster-frame img { width: 100%; height: auto; display: block; }
+.event-poster-card .poster-body { padding: 28px 26px; }
+.event-poster-card .poster-body h2 { font-size: 23px; color: var(--navy); margin-bottom: 0; }
+.event-poster-card .poster-body .divider { margin: 14px 0 16px; }
+.event-poster-card .poster-body p.desc { color: #55606b; line-height: 1.7; margin-bottom: 18px; font-size: 15px; }
+.event-poster-card .poster-body .contact-row { margin-bottom: 10px; }
+
+@media (max-width: 860px) {
+  .events-detail-grid { grid-template-columns: 1fr; }
+}
 
 /* ===== BLOG ===== */
 .blog { padding: 90px 0; text-align: center; background: var(--gray); }
