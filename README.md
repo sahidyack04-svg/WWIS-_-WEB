@@ -2,7 +2,7 @@
 
 Website project for **Wisdom Wealth International School (WWIS), Trichy** — a Cambridge (CIE) curriculum school.
 
-Live reference: https://wwis-web.vercel.app/index.html
+Live reference: https://wwis2026web.vercel.app/index.html
 
 ## About WWIS
 

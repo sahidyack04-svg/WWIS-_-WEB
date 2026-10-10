@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /mockups/
 
-Sitemap: https://wwis-web.vercel.app/sitemap.xml
+Sitemap: https://wwis2026web.vercel.app/sitemap.xml
