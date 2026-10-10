@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /mockups/
+
+Sitemap: https://wwis-web.vercel.app/sitemap.xml
