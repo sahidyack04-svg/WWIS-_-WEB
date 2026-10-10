@@ -72,6 +72,8 @@ header {
   margin: 0 auto;
 }
 .logo img { height: 64px; width: auto; display: block; }
+.right-group { display: flex; align-items: center; gap: 16px; }
+.cambridge-badge { height: 52px; width: auto; display: block; flex-shrink: 0; }
 nav > ul {
   display: flex;
   gap: 30px;
@@ -593,7 +595,8 @@ footer::before {
   nav ul li { padding: 10px 0; border-bottom: 1px solid var(--gray); }
   nav[hidden] { display: none; }
   .nav-toggle { display: flex; }
-  .nav-wrap .btn-maroon { display: none; }
+  .right-group { gap: 8px; }
+  .cambridge-badge { height: 20px; }
   .hero-text h1 { font-size: 34px; }
   .tab-bar { top: 0; }
 
