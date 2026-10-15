@@ -96,7 +96,43 @@
   .enquiry-strip { padding: 70px 0; text-align: center; background: var(--navy); color: #fff; }
   .enquiry-strip h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 28px; margin-bottom: 10px; }
   .enquiry-strip h2 .accent { color: var(--orange); }
-  .enquiry-strip p { max-width: 560px; margin: 0 auto 28px; opacity: .9; font-size: 15px; line-height: 1.7; }
+  .enquiry-strip p.lede { max-width: 560px; margin: 0 auto 36px; opacity: .9; font-size: 15px; line-height: 1.7; }
+
+  .enquiry-card { background: #fff; border-radius: 14px; padding: 40px; max-width: 900px; margin: 0 auto; text-align: left; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+  .enquiry-card fieldset { border: none; margin: 0 0 30px; padding: 0; }
+  .enquiry-card fieldset:last-of-type { margin-bottom: 0; }
+  .enquiry-card legend { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 17px; color: var(--navy); margin-bottom: 4px; padding: 0; }
+  .enquiry-card .fieldset-divider { width: 46px; height: 3px; background: var(--orange); border-radius: 2px; margin-bottom: 18px; }
+  .enquiry-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 22px; }
+  .enquiry-field { display: flex; flex-direction: column; }
+  .enquiry-field.full { grid-column: 1 / -1; }
+  .enquiry-field label { font-size: 13.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .enquiry-field label .req { color: var(--maroon); }
+  .enquiry-field input[type="text"],
+  .enquiry-field input[type="date"],
+  .enquiry-field input[type="email"],
+  .enquiry-field input[type="tel"],
+  .enquiry-field textarea {
+    font: inherit; font-size: 14.5px; padding: 10px 12px; border: 1.5px solid #d9dee4; border-radius: 8px;
+    color: #1a1a1a; background: #fafbfc; transition: border-color .18s ease;
+  }
+  .enquiry-field input:focus, .enquiry-field textarea:focus { outline: none; border-color: var(--navy); background: #fff; }
+  .enquiry-field textarea { resize: vertical; min-height: 64px; }
+  .enquiry-radio-row, .enquiry-check-row { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; min-height: 40px; }
+  .enquiry-radio-row label, .enquiry-check-row label { font-size: 14px; font-weight: 500; color: #333; display: flex; align-items: center; gap: 6px; margin: 0; }
+  .enquiry-radio-row input, .enquiry-check-row input { accent-color: var(--maroon); width: 16px; height: 16px; }
+  .enquiry-other-text { margin-top: 10px; max-width: 320px; }
+  .enquiry-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .enquiry-submit-row { text-align: center; margin-top: 10px; }
+  .enquiry-submit-row button { font: inherit; cursor: pointer; }
+  .enquiry-submit-row button:disabled { opacity: .6; cursor: not-allowed; }
+  .enquiry-status { margin-top: 18px; font-size: 14.5px; font-weight: 600; min-height: 22px; }
+  .enquiry-status.success { color: #1a7f4e; }
+  .enquiry-status.error { color: var(--maroon); }
+  @media (max-width: 640px) {
+    .enquiry-card { padding: 26px 20px; }
+    .enquiry-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -192,8 +228,145 @@
 <section class="enquiry-strip">
   <div class="container">
     <h2>Ready to <span class="accent">begin?</span></h2>
-    <p>Kindly fill out our enquiry form and our admissions team will get in touch with you to schedule your visit.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBcWKlS0N5iMFH-lGmDUZWV53AiwvtaVnND6Oax_wxLByxmg/viewform?usp=sharing&ouid=112879146884860365820" target="_blank" rel="noopener" class="btn btn-maroon">Fill Enquiry Form</a>
+    <p class="lede">Kindly fill out our enquiry form and our admissions team will get in touch with you to schedule your visit.</p>
+
+    <form class="enquiry-card" id="admissionForm" novalidate>
+      <input type="text" name="_honey" class="enquiry-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <fieldset>
+        <legend>Child Details</legend>
+        <div class="fieldset-divider"></div>
+        <div class="enquiry-grid">
+          <div class="enquiry-field">
+            <label for="childName">Name of the Child <span class="req">*</span></label>
+            <input type="text" id="childName" name="childName" required maxlength="120">
+          </div>
+          <div class="enquiry-field">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+          </div>
+          <div class="enquiry-field">
+            <label>Gender</label>
+            <div class="enquiry-radio-row">
+              <label><input type="radio" name="gender" value="Male"> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+          </div>
+          <div class="enquiry-field">
+            <label for="ageAsOnJune">Age as on 1st of June</label>
+            <input type="date" id="ageAsOnJune" name="ageAsOnJune">
+          </div>
+          <div class="enquiry-field">
+            <label for="gradeSought">Grade to which admission is sought</label>
+            <input type="text" id="gradeSought" name="gradeSought" maxlength="60">
+          </div>
+          <div class="enquiry-field">
+            <label for="currentSchool">Current School, and Class</label>
+            <input type="text" id="currentSchool" name="currentSchool" maxlength="150">
+          </div>
+          <div class="enquiry-field">
+            <label for="siblingsCount">Siblings count</label>
+            <input type="text" id="siblingsCount" name="siblingsCount" maxlength="20">
+          </div>
+          <div class="enquiry-field">
+            <label>Do you wish to admit siblings later?</label>
+            <div class="enquiry-radio-row">
+              <label><input type="radio" name="admitSiblingsLater" value="Yes"> Yes</label>
+              <label><input type="radio" name="admitSiblingsLater" value="No"> No</label>
+            </div>
+          </div>
+          <div class="enquiry-field full">
+            <label>Ailments / Learning disability (if any)</label>
+            <div class="enquiry-check-row">
+              <label><input type="checkbox" name="ailments" value="Development delays"> Development delays</label>
+              <label><input type="checkbox" name="ailments" value="Dyslexia"> Dyslexia</label>
+              <label><input type="checkbox" name="ailments" value="Language &amp; Speech disorders"> Language &amp; Speech disorders</label>
+              <label><input type="checkbox" name="ailments" value="Other"> Other</label>
+            </div>
+            <input type="text" class="enquiry-other-text" name="ailmentsOther" placeholder="If other, please specify" maxlength="200">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>How You Know About WWIS</legend>
+        <div class="fieldset-divider"></div>
+        <div class="enquiry-grid">
+          <div class="enquiry-field full">
+            <div class="enquiry-check-row">
+              <label><input type="checkbox" name="howKnown" value="Internet / Website"> Internet / Website</label>
+              <label><input type="checkbox" name="howKnown" value="Advertisement / Newspaper"> Advertisement / Newspaper</label>
+              <label><input type="checkbox" name="howKnown" value="Family / Friends / Colleagues / Neighbours"> Family / Friends / Colleagues / Neighbours</label>
+              <label><input type="checkbox" name="howKnown" value="Other"> Other</label>
+            </div>
+            <input type="text" class="enquiry-other-text" name="howKnownOther" placeholder="If other, please specify" maxlength="200">
+          </div>
+          <div class="enquiry-field full">
+            <label for="timeSpentWithChild">Time spent with child</label>
+            <input type="text" id="timeSpentWithChild" name="timeSpentWithChild" maxlength="150">
+          </div>
+          <div class="enquiry-field full">
+            <label for="topFeatures">Top features you look for in a good school</label>
+            <textarea id="topFeatures" name="topFeatures" maxlength="500"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Parent / Guardian Details</legend>
+        <div class="fieldset-divider"></div>
+        <div class="enquiry-grid">
+          <div class="enquiry-field">
+            <label for="parentName">Parent Name <span class="req">*</span></label>
+            <input type="text" id="parentName" name="parentName" required maxlength="120">
+          </div>
+          <div class="enquiry-field">
+            <label for="parentQualification">Parent Qualification</label>
+            <input type="text" id="parentQualification" name="parentQualification" maxlength="120">
+          </div>
+          <div class="enquiry-field">
+            <label for="parentProfession">Parent Profession</label>
+            <input type="text" id="parentProfession" name="parentProfession" maxlength="120">
+          </div>
+          <div class="enquiry-field">
+            <label for="placeOfEmployment">Place of Employment</label>
+            <input type="text" id="placeOfEmployment" name="placeOfEmployment" maxlength="150">
+          </div>
+          <div class="enquiry-field full">
+            <label for="address">Current Residential Address</label>
+            <textarea id="address" name="address" maxlength="400"></textarea>
+          </div>
+          <div class="enquiry-field">
+            <label for="contactNumber">Contact Number <span class="req">*</span></label>
+            <input type="tel" id="contactNumber" name="contactNumber" required maxlength="20">
+          </div>
+          <div class="enquiry-field">
+            <label for="email">Email ID <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required maxlength="150">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <div class="fieldset-divider"></div>
+        <div class="enquiry-grid">
+          <div class="enquiry-field full">
+            <label for="remarks">Remarks</label>
+            <textarea id="remarks" name="remarks" maxlength="500"></textarea>
+          </div>
+          <div class="enquiry-field full">
+            <label for="followUpDetails">Follow-Up Details</label>
+            <textarea id="followUpDetails" name="followUpDetails" maxlength="500"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="enquiry-submit-row">
+        <button type="submit" class="btn btn-maroon" id="admissionSubmitBtn">Submit Enquiry</button>
+        <div class="enquiry-status" id="admissionStatus" role="status" aria-live="polite"></div>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -221,7 +394,6 @@
       </div>
       <div>
         <h3>Contact Us</h3>
-        <div class="footer-contact-item"><div class="ic">&#9742;</div><p><a href="tel:+918124648888" style="color:inherit;text-decoration:none;">+91 81246 48888</a></p></div>
         <div class="footer-contact-item"><div class="ic">&#9742;</div><p><a href="tel:+918336012345" style="color:inherit;text-decoration:none;">+91 83360 12345</a></p></div>
         <div class="footer-contact-item"><div class="ic">&#128205;</div><p>Trichy – 620 007</p></div>
         <div class="footer-contact-item"><div class="ic">&#128337;</div><p>Mon–Sat, 9–5:30</p></div>
@@ -241,11 +413,10 @@
           <li><a href="admission.html">Admission</a></li>
         </ul>
       </div>
-      <div class="footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Subscribe to be the first to know about our events and admissions.</p>
-        <input type="email" placeholder="Email">
-        <button type="button">Subscribe</button>
+      <div class="footer-whatsapp">
+        <h3>Join Our WhatsApp Group</h3>
+        <p>Stay connected with WWIS for school updates, events, and announcements.</p>
+        <div class="footer-contact-item"><div class="ic">&#9742;</div><p><a href="tel:+918336012345" style="color:inherit;text-decoration:none;">+91 83360 12345</a></p></div>
       </div>
     </div>
     <div class="footer-bottom-bar">

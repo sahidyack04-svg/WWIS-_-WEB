@@ -57,4 +57,92 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     start();
   }
+
+  // Admission enquiry form: submitted via our own /api/send-admission function,
+  // which sends the enquiry through Resend to rootadmin@wwistrichy.com.
+  var admissionForm = document.getElementById('admissionForm');
+  if (admissionForm) {
+    var statusEl = document.getElementById('admissionStatus');
+    var submitBtn = document.getElementById('admissionSubmitBtn');
+    var ADMISSION_ENDPOINT = '/api/send-admission';
+
+    function isValidEmail(value) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+    function isValidPhone(value) {
+      var digits = String(value).replace(/\D/g, '');
+      return digits.length >= 7 && digits.length <= 15;
+    }
+    function showSuccess() {
+      admissionForm.reset();
+      admissionForm.querySelectorAll('fieldset').forEach(function (fs) { fs.hidden = true; });
+      submitBtn.hidden = true;
+      statusEl.textContent = "Thank you — we've received your enquiry. Our admissions team will contact you shortly.";
+      statusEl.className = 'enquiry-status success';
+      statusEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    admissionForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!admissionForm.reportValidity()) return;
+
+      var formData = new FormData(admissionForm);
+
+      // Honeypot: real visitors never fill this hidden field. Pretend success so bots
+      // don't learn to look for a different signal, but skip sending anything.
+      if ((formData.get('_honey') || '').toString().trim()) {
+        showSuccess();
+        return;
+      }
+
+      var raw = {};
+      formData.forEach(function (value, key) {
+        if (key === '_honey') return;
+        if (raw.hasOwnProperty(key)) {
+          raw[key] = Array.isArray(raw[key]) ? raw[key].concat(value) : [raw[key], value];
+        } else {
+          raw[key] = value;
+        }
+      });
+
+      var email = (raw.email || '').toString().trim();
+      var contactNumber = (raw.contactNumber || '').toString().trim();
+      if (!isValidEmail(email)) {
+        statusEl.textContent = 'Please provide a valid email address.';
+        statusEl.className = 'enquiry-status error';
+        return;
+      }
+      if (!isValidPhone(contactNumber)) {
+        statusEl.textContent = 'Please provide a valid contact number.';
+        statusEl.className = 'enquiry-status error';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      statusEl.textContent = '';
+      statusEl.className = 'enquiry-status';
+
+      fetch(ADMISSION_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(raw)
+      })
+        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+        .then(function (result) {
+          if (result.ok && result.data && result.data.ok) {
+            showSuccess();
+          } else {
+            throw new Error((result.data && result.data.error) || 'Request failed');
+          }
+        })
+        .catch(function (err) {
+          statusEl.textContent = (err && err.message) || 'Something went wrong sending your enquiry. Please try again.';
+          statusEl.className = 'enquiry-status error';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Enquiry';
+        });
+    });
+  }
 });
