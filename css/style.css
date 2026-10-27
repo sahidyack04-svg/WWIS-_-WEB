@@ -533,6 +533,22 @@ footer::before {
   .special-tracks-grid { grid-template-columns: 1fr; }
 }
 
+.track-card.lsrw-card { grid-column: 1 / -1; border-top-color: var(--navy); }
+.track-card.lsrw-card h3 { font-size: 20px; }
+.track-card.lsrw-card p.lsrw-intro { margin-bottom: 4px; }
+.track-card.lsrw-card p.lsrw-outro { margin-top: 20px; }
+.lsrw-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
+.lsrw-item { background: var(--gray); border-radius: 12px; padding: 16px 14px; }
+.lsrw-letter { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 10px; }
+.lsrw-item h4 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px; color: var(--navy); margin: 0 0 6px; }
+.lsrw-item p { font-size: 12.5px; line-height: 1.55; color: #55606b; margin: 0; }
+@media (max-width: 860px) {
+  .lsrw-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .lsrw-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== FAQ ACCORDION (Career) ===== */
 .faq-wrap { padding: 20px 0 90px; max-width: 820px; margin: 0 auto; }
 .faq-item { background: #fff; border: 1px solid var(--gray); border-radius: 14px; margin-bottom: 14px; overflow: hidden; box-shadow: 0 6px 18px rgba(10,61,98,.06); }
