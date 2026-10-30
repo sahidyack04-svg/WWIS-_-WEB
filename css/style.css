@@ -646,3 +646,19 @@ footer::before {
   .post-detail-gallery { grid-template-columns: 1fr; }
   .post-detail-head h1 { font-size: 26px; }
 }
+
+/* ===== CAREER PATHWAYS PAGE (image gallery) ===== */
+.pathways-wrap { padding: 20px 0 90px; }
+.pathways-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pathways-gallery .photo-frame { border-radius: 16px; overflow: hidden; box-shadow: 0 16px 36px rgba(10, 61, 98, 0.14); background: var(--gray); }
+.pathways-gallery .photo-frame img { width: 100%; height: auto; display: block; }
+
+@media (max-width: 760px) {
+  .pathways-gallery { grid-template-columns: 1fr; gap: 20px; }
+}
