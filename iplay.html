@@ -86,6 +86,12 @@
 <link rel="stylesheet" href="css/style.css?v=3">
 <style>
   .storybook-text .closing-note { margin-top: 18px; padding: 14px 18px; background: var(--gray); border-left: 4px solid var(--orange); border-radius: 10px; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px; color: var(--maroon); line-height: 1.6; }
+  /* Keep the checkmark aligned with the top line of its label when text wraps to two lines */
+  .tabs-wrap .checklist li { align-items: flex-start; }
+  .tabs-wrap .checklist li .check-text { flex: 1; min-width: 0; }
+  /* Remove the trailing gap under the last element of each text column so blocks sit evenly against their photo */
+  .tabs-wrap .storybook-text > *:last-child { margin-bottom: 0; }
+  .tabs-wrap .checklist li:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -171,11 +177,11 @@
         <div class="divider"></div>
         <p class="desc">Every day is a joyful journey of exploration, creativity, and meaningful learning.</p>
         <ul class="checklist">
-          <li><span class="check">&#10003;</span> <strong>Play &amp; Explore:</strong> Learn through joyful play and hands-on activities.</li>
-          <li><span class="check">&#10003;</span> <strong>Create &amp; Imagine:</strong> Express ideas through art, music, and imaginative play.</li>
-          <li><span class="check">&#10003;</span> <strong>Move &amp; Grow:</strong> Build physical skills through movement and outdoor play.</li>
-          <li><span class="check">&#10003;</span> <strong>Connect &amp; Communicate:</strong> Develop language, friendships, and teamwork.</li>
-          <li><span class="check">&#10003;</span> <strong>Pause &amp; Recharge:</strong> Enjoy quiet moments and relaxation.</li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Play &amp; Explore:</strong> Learn through joyful play and hands-on activities.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Create &amp; Imagine:</strong> Express ideas through art, music, and imaginative play.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Move &amp; Grow:</strong> Build physical skills through movement and outdoor play.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Connect &amp; Communicate:</strong> Develop language, friendships, and teamwork.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Pause &amp; Recharge:</strong> Enjoy quiet moments and relaxation.</span></li>
         </ul>
         <p class="closing-note">Every day brings new discoveries, joyful experiences, and opportunities to grow!</p>
       </div>
@@ -188,11 +194,11 @@
         <div class="divider"></div>
         <p class="desc">Our facilitators create engaging experiences that help learners explore and understand the world around them.</p>
         <ul class="checklist">
-          <li><span class="check">&#10003;</span> <strong>Multi-Sensory Learning:</strong> Explore textures, sounds, colours, and shapes.</li>
-          <li><span class="check">&#10003;</span> <strong>Movement-Based Learning:</strong> Learn through songs, rhythm, and movement.</li>
-          <li><span class="check">&#10003;</span> <strong>Real-World Exploration:</strong> Discover through nature walks and hands-on activities.</li>
-          <li><span class="check">&#10003;</span> <strong>Responsive Facilitation:</strong> Support each learner&rsquo;s interests and pace.</li>
-          <li><span class="check">&#10003;</span> <strong>Purposeful Environment:</strong> Explore thoughtfully designed learning spaces.</li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Multi-Sensory Learning:</strong> Explore textures, sounds, colours, and shapes.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Movement-Based Learning:</strong> Learn through songs, rhythm, and movement.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Real-World Exploration:</strong> Discover through nature walks and hands-on activities.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Responsive Facilitation:</strong> Support each learner&rsquo;s interests and pace.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Purposeful Environment:</strong> Explore thoughtfully designed learning spaces.</span></li>
         </ul>
         <p class="closing-note">Every interaction inspires discovery, exploration, and learning.</p>
       </div>
@@ -220,12 +226,12 @@
         <div class="divider"></div>
         <p class="desc">Our iPlay Programme develops confident communicators through joyful, everyday language learning.</p>
         <ul class="checklist">
-          <li><span class="check">&#10003;</span> <strong>Listening &amp; Speaking:</strong> Learn through conversations and stories.</li>
-          <li><span class="check">&#10003;</span> <strong>Reading &amp; Writing:</strong> Build early literacy skills.</li>
-          <li><span class="check">&#10003;</span> <strong>Rich Vocabulary:</strong> Explore words through poems, rhymes, and songs.</li>
-          <li><span class="check">&#10003;</span> <strong>Multilingual Learning:</strong> Discover Tamil, Hindi, and English.</li>
-          <li><span class="check">&#10003;</span> <strong>Learning Through Play:</strong> Enjoy language games, role-play, and circle time.</li>
-          <li><span class="check">&#10003;</span> <strong>Everyday Practice:</strong> Practise new words and express ideas confidently.</li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Listening &amp; Speaking:</strong> Learn through conversations and stories.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Reading &amp; Writing:</strong> Build early literacy skills.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Rich Vocabulary:</strong> Explore words through poems, rhymes, and songs.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Multilingual Learning:</strong> Discover Tamil, Hindi, and English.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Learning Through Play:</strong> Enjoy language games, role-play, and circle time.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Everyday Practice:</strong> Practise new words and express ideas confidently.</span></li>
         </ul>
         <p class="desc" style="margin-top:14px;">Language learning progresses naturally from listening and speaking to reading and writing.</p>
         <p class="closing-note">Our goal is to nurture confident, expressive, multilingual learners.</p>

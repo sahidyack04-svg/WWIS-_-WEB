@@ -77,6 +77,12 @@
   @media (max-width: 640px) {
     .storybook-tag { font-size: 11.5px; padding: 6px 14px; }
   }
+  /* Keep the checkmark aligned with the top line of its label when text wraps to two lines */
+  .tabs-wrap .checklist li { align-items: flex-start; }
+  .tabs-wrap .checklist li .check-text { flex: 1; min-width: 0; }
+  /* Remove the trailing gap under the last element of each text column so blocks sit evenly against their photo */
+  .tabs-wrap .storybook-text > *:last-child { margin-bottom: 0; }
+  .tabs-wrap .checklist li:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -212,7 +218,14 @@
       <div class="storybook-text">
         <h2 class="two-tone"><span class="navy-t">Language Hour</span></h2>
         <div class="divider"></div>
-        <p class="desc">Tamil, Hindi and English are introduced through storytelling, circle time, songs, rhymes and discussions — progressing through listening, speaking, reading and writing.</p>
+        <ul class="checklist">
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Multilingual Learning:</strong> Learn Tamil, English, and Hindi.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Reading Programme:</strong> Read a new book every week to build reading habits and vocabulary.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Journal Writing:</strong> Write weekly journals in Tamil and English to express thoughts and improve writing.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Public Speaking:</strong> Speak to an audience through project presentations, community meetings, and school events.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Language Labs:</strong> Develop communication skills through interactive language sessions.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Creative Writing:</strong> Contribute articles, poems, and short stories to the school newsletter.</span></li>
+        </ul>
       </div>
     </div>
 
@@ -224,11 +237,11 @@
         <p class="desc">Play is an essential part of every learner's growth. It builds confidence, creativity, problem-solving skills, and healthy relationships while making learning joyful and meaningful.</p>
         <p class="desc" style="margin-bottom:10px;"><strong>The Smart Moves Programme includes:</strong></p>
         <ul class="checklist">
-          <li><span class="check">&#10003;</span> <strong>Brain-Body Coordination:</strong> Simple physical exercises that encourage coordination and concentration.</li>
-          <li><span class="check">&#10003;</span> <strong>Gross Motor Skills:</strong> Running, jumping, balancing, and other activities that build strength and stamina.</li>
-          <li><span class="check">&#10003;</span> <strong>Fine Motor Skills:</strong> Hands-on activities that develop hand strength, control, and coordination.</li>
-          <li><span class="check">&#10003;</span> <strong>Creative Play:</strong> Free play, pretend play, imaginative play, and construction activities that spark creativity.</li>
-          <li><span class="check">&#10003;</span> <strong>Social and Emotional Growth:</strong> Opportunities to share, communicate, cooperate, and resolve conflicts.</li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Brain-Body Coordination:</strong> Simple physical exercises that encourage coordination and concentration.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Gross Motor Skills:</strong> Running, jumping, balancing, and other activities that build strength and stamina.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Fine Motor Skills:</strong> Hands-on activities that develop hand strength, control, and coordination.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Creative Play:</strong> Free play, pretend play, imaginative play, and construction activities that spark creativity.</span></li>
+          <li><span class="check">&#10003;</span><span class="check-text"><strong>Social and Emotional Growth:</strong> Opportunities to share, communicate, cooperate, and resolve conflicts.</span></li>
         </ul>
         <p class="desc" style="margin-top:14px; margin-bottom:0;">Through the Smart Moves Programme, learners develop strong bodies, active minds, and happy hearts. Play is given special importance in the iPlay Programme, making every learning experience fun and engaging.</p>
       </div>
@@ -239,7 +252,7 @@
       <div class="storybook-text">
         <h2 class="two-tone"><span class="navy-t">Nature Time</span></h2>
         <div class="divider"></div>
-        <p class="desc" style="margin-bottom:14px;"><strong>Your child gets the opportunity to spend extended time in nature.</strong></p>
+        <p class="desc" style="margin-bottom:10px;"><strong>Your child gets the opportunity to spend extended time in nature.</strong></p>
         <ul class="checklist">
           <li><span class="check">&#10003;</span> Explore the beauty of nature through outdoor experiences.</li>
           <li><span class="check">&#10003;</span> Observe plants, insects, birds, and seasonal changes.</li>
