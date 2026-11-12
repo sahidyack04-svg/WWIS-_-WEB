@@ -92,6 +92,46 @@
   /* Remove the trailing gap under the last element of each text column so blocks sit evenly against their photo */
   .tabs-wrap .storybook-text > *:last-child { margin-bottom: 0; }
   .tabs-wrap .checklist li:last-child { margin-bottom: 0; }
+
+  /* ===== BRAIN DEVELOPMENT ACTIVITIES + THEME-BASED LEARNING ===== */
+  .play-features { padding: 90px 0; }
+  .play-features + .play-features { border-top: 1px solid var(--gray); }
+  .play-features .section-label { text-align: center; display: block; }
+  .play-features h2.two-tone { font-size: 32px; text-align: center; margin-bottom: 0; line-height: 1.25; }
+  .play-features h2.two-tone .navy-t { color: var(--navy); }
+  .play-features h2.two-tone .maroon-t { color: var(--maroon); }
+  .play-features .divider { width: 60px; height: 4px; background: var(--orange); border-radius: 2px; margin: 16px auto 22px; }
+  .play-features .intro-copy { max-width: 680px; margin: 0 auto 44px; text-align: center; color: #55606b; line-height: 1.7; font-size: 15.5px; }
+  .play-features .closing-note { max-width: 700px; margin: 40px auto 0; text-align: center; padding: 16px 26px; background: var(--gray); border-left: 4px solid var(--orange); border-radius: 10px; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px; color: var(--maroon); line-height: 1.6; }
+  .play-features .sub-heading { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 20px; color: var(--navy); text-align: center; margin: 56px 0 26px; }
+
+  /* 10 activity cards — reuses the .track-card component, 5-across grid */
+  .activities-grid { grid-template-columns: repeat(5, 1fr); margin-top: 0; }
+  .activities-grid .track-card { padding: 24px 18px; text-align: center; }
+  .activities-grid .track-icon { margin: 0 auto 14px; width: 42px; height: 42px; font-size: 13px; }
+  .activities-grid .track-card h3 { font-size: 15.5px; margin-bottom: 8px; }
+  .activities-grid .track-card p { font-size: 13px; }
+
+  /* 15 themes — compact numbered chips, same family as the LSRW grid */
+  .theme-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 8px; }
+  .theme-item { background: var(--gray); border-radius: 14px; padding: 18px 12px; text-align: center; }
+  .theme-item .theme-num { width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
+  .theme-item:nth-child(3n+2) .theme-num { background: var(--maroon); }
+  .theme-item:nth-child(3n+3) .theme-num { background: var(--orange); color: var(--navy); }
+  .theme-item .theme-name { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13.5px; color: var(--text); line-height: 1.35; display: block; }
+
+  @media (max-width: 860px) {
+    .activities-grid { grid-template-columns: repeat(3, 1fr); }
+    .theme-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .activities-grid { grid-template-columns: repeat(2, 1fr); }
+    .theme-grid { grid-template-columns: repeat(2, 1fr); }
+    .play-features h2.two-tone { font-size: 26px; }
+  }
+  @media (max-width: 420px) {
+    .activities-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -239,6 +279,123 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="play-features" id="iplay-brain-development">
+  <div class="container">
+    <span class="section-label">Learning Through Play</span>
+    <h2 class="two-tone"><span class="navy-t">Brain Development Activities</span> <span class="maroon-t">– iPlay</span></h2>
+    <div class="divider"></div>
+    <p class="intro-copy">Your child&rsquo;s brain develops through joyful play, hands-on experiences and multisensory exploration. A variety of activities help your child think, imagine, create, discover and learn.</p>
+
+    <div class="special-tracks-grid activities-grid">
+      <div class="track-card">
+        <div class="track-icon">SA</div>
+        <h3>Sand Play</h3>
+        <p>Your child explores textures, builds shapes and discovers through hands-on experiences.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">WA</div>
+        <h3>Water Play</h3>
+        <p>Your child pours, splashes, floats and experiments with water.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">CL</div>
+        <h3>Clay Play</h3>
+        <p>Your child moulds, shapes and creates using imagination and creativity.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">SE</div>
+        <h3>Sensory Path</h3>
+        <p>Your child experiences different textures, movements and sensations.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">OU</div>
+        <h3>Outdoor Play</h3>
+        <p>Your child runs, jumps, climbs and balances while developing physical coordination.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">IM</div>
+        <h3>Imaginative Play</h3>
+        <p>Your child creates stories, pretends and explores different roles.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">BU</div>
+        <h3>Building Play</h3>
+        <p>Your child constructs towers, bridges and creative structures.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">NA</div>
+        <h3>Nature Play</h3>
+        <p>Your child discovers leaves, flowers, stones, insects and other natural wonders.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">PU</div>
+        <h3>Puzzle Play</h3>
+        <p>Your child matches, sorts, solves and develops logical thinking.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">MM</div>
+        <h3>Music and Movement</h3>
+        <p>Your child explores rhythm, sound, dance and movement.</p>
+      </div>
+    </div>
+
+    <p class="closing-note">Every play opens a new window of discovery, imagination and brain development!</p>
+  </div>
+</section>
+
+<section class="play-features" id="iplay-theme-based-learning">
+  <div class="container">
+    <span class="section-label">Learning Through Play</span>
+    <h2 class="two-tone"><span class="navy-t">Theme-Based Learning</span> <span class="maroon-t">– iPlay</span></h2>
+    <div class="divider"></div>
+    <p class="intro-copy">Your child explores the world through 15 exciting themes throughout the year! Each theme brings learning to life through stories, real-life experiences, hands-on activities and educational field trips.</p>
+
+    <h3 class="sub-heading">15 Exciting Themes</h3>
+    <div class="theme-grid">
+      <div class="theme-item"><span class="theme-num">1</span><span class="theme-name">My Body</span></div>
+      <div class="theme-item"><span class="theme-num">2</span><span class="theme-name">Light and Mirror</span></div>
+      <div class="theme-item"><span class="theme-num">3</span><span class="theme-name">Plants</span></div>
+      <div class="theme-item"><span class="theme-num">4</span><span class="theme-name">Farms and Forest</span></div>
+      <div class="theme-item"><span class="theme-num">5</span><span class="theme-name">Birds and Insects</span></div>
+      <div class="theme-item"><span class="theme-num">6</span><span class="theme-name">Building and Bridges</span></div>
+      <div class="theme-item"><span class="theme-num">7</span><span class="theme-name">Professions</span></div>
+      <div class="theme-item"><span class="theme-num">8</span><span class="theme-name">Water and Rain</span></div>
+      <div class="theme-item"><span class="theme-num">9</span><span class="theme-name">Diwali and Clothes</span></div>
+      <div class="theme-item"><span class="theme-num">10</span><span class="theme-name">Food and Cooking</span></div>
+      <div class="theme-item"><span class="theme-num">11</span><span class="theme-name">Vehicles</span></div>
+      <div class="theme-item"><span class="theme-num">12</span><span class="theme-name">Pongal</span></div>
+      <div class="theme-item"><span class="theme-num">13</span><span class="theme-name">Sound and Music</span></div>
+      <div class="theme-item"><span class="theme-num">14</span><span class="theme-name">Animals</span></div>
+      <div class="theme-item"><span class="theme-num">15</span><span class="theme-name">Machine and Robotics</span></div>
+    </div>
+
+    <div class="special-tracks-grid feature-cards-grid" style="margin-top:40px;">
+      <div class="track-card">
+        <div class="track-icon">SB</div>
+        <h3>Story-Based Learning</h3>
+        <p>Your child discovers new concepts through interesting stories and real-life incidents.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">LB</div>
+        <h3>Learning Beyond the Classroom</h3>
+        <p>Your child visits different places through educational field trips to connect classroom learning with the real world.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">HE</div>
+        <h3>Hands-on Exploration</h3>
+        <p>Your child observes, experiments, questions and discovers through practical experiences.</p>
+      </div>
+      <div class="track-card">
+        <div class="track-icon">LS</div>
+        <h3>Life Skills Development</h3>
+        <p>Your child develops communication, observation, decision-making, independence and problem-solving skills.</p>
+      </div>
+    </div>
+
+    <p class="closing-note">Every theme is a new adventure, helping your child connect learning with the world around them!</p>
   </div>
 </section>
 
