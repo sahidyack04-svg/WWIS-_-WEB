@@ -444,12 +444,22 @@ footer::before {
 .storybook-photo img { width: 100%; height: 340px; object-fit: contain; object-position: center; display: block; }
 .storybook-photo .photo-frame:has(video) { max-width: 440px; margin: 0 auto; background: var(--gray); }
 .storybook-photo video { width: 100%; height: auto; display: block; }
+
+/* ===== CAREER PATHWAYS: large portrait images ===== */
+.storybook-photo.pathway-photo .photo-frame { max-width: 440px; margin: 0 auto; aspect-ratio: 3 / 4; }
+.storybook-photo.pathway-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .storybook-text { flex: 1; }
 .storybook-text h2.two-tone { font-size: 30px; margin-bottom: 16px; line-height: 1.2; }
 .storybook-text h2.two-tone .navy-t { color: var(--navy); }
 .storybook-text h2.two-tone .maroon-t { color: var(--maroon); }
 .storybook-text .divider { width: 60px; height: 4px; background: var(--orange); border-radius: 2px; margin-bottom: 20px; }
 .storybook-text .desc { color: #55606b; line-height: 1.7; margin-bottom: 20px; font-size: 15.5px; }
+.storybook-text h3 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 19px; color: var(--navy); margin: 28px 0 12px; }
+
+.storybook-row.full-text { display: block; max-width: 820px; }
+.storybook-row.full-text .storybook-text { max-width: 100%; }
+
+.checklist.cols-2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
 
 /* ===== PROGRAMS: BIG FEATURE BLOCKS ===== */
 .feature-block, .ilp-strip { scroll-margin-top: 90px; }
@@ -533,6 +543,14 @@ footer::before {
   .special-tracks-grid { grid-template-columns: 1fr; }
 }
 
+.special-tracks-grid.feature-cards-grid { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 860px) {
+  .special-tracks-grid.feature-cards-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .special-tracks-grid.feature-cards-grid { grid-template-columns: 1fr; }
+}
+
 .track-card.lsrw-card { grid-column: 1 / -1; border-top-color: var(--navy); }
 .track-card.lsrw-card h3 { font-size: 20px; }
 .track-card.lsrw-card p.lsrw-intro { margin-bottom: 4px; }
@@ -584,6 +602,7 @@ footer::before {
   .hero-inner, .welcome-grid { flex-direction: column; }
   .storybook-row, .storybook-row.reverse { flex-direction: column; }
   .storybook-photo img { height: 240px; }
+  .checklist.cols-2 { grid-template-columns: 1fr; }
   .storybook-photo .image-holder { min-height: 200px; }
   .feature-block .container, .feature-block.reverse .container { flex-direction: column; }
   .feature-block .photo img { height: 240px; }
@@ -647,18 +666,3 @@ footer::before {
   .post-detail-head h1 { font-size: 26px; }
 }
 
-/* ===== CAREER PATHWAYS PAGE (image gallery) ===== */
-.pathways-wrap { padding: 20px 0 90px; }
-.pathways-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.pathways-gallery .photo-frame { border-radius: 16px; overflow: hidden; box-shadow: 0 16px 36px rgba(10, 61, 98, 0.14); background: var(--gray); }
-.pathways-gallery .photo-frame img { width: 100%; height: auto; display: block; }
-
-@media (max-width: 760px) {
-  .pathways-gallery { grid-template-columns: 1fr; gap: 20px; }
-}
