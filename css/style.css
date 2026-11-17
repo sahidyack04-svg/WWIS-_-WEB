@@ -551,20 +551,23 @@ footer::before {
   .special-tracks-grid.feature-cards-grid { grid-template-columns: 1fr; }
 }
 
-.track-card.lsrw-card { grid-column: 1 / -1; border-top-color: var(--navy); }
-.track-card.lsrw-card h3 { font-size: 20px; }
-.track-card.lsrw-card p.lsrw-intro { margin-bottom: 4px; }
-.track-card.lsrw-card p.lsrw-outro { margin-top: 20px; }
-.lsrw-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
-.lsrw-item { background: var(--gray); border-radius: 12px; padding: 16px 14px; }
-.lsrw-letter { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 10px; }
-.lsrw-item h4 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px; color: var(--navy); margin: 0 0 6px; }
-.lsrw-item p { font-size: 12.5px; line-height: 1.55; color: #55606b; margin: 0; }
-@media (max-width: 860px) {
-  .lsrw-grid { grid-template-columns: repeat(2, 1fr); }
+.track-card.lang-lab-card { grid-column: 1 / -1; border-top-color: var(--navy); padding: 32px 36px; }
+.track-card.lang-lab-card h3 { font-size: 21px; margin-bottom: 16px; }
+.track-card.lang-lab-card p { margin-bottom: 14px; max-width: 760px; }
+.track-card.lang-lab-card p.lang-lab-lead { color: #3c4753; }
+.track-card.lang-lab-card p.lang-lab-highlight {
+  margin-bottom: 0;
+  margin-top: 6px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(10, 61, 98, 0.12);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--navy);
 }
 @media (max-width: 600px) {
-  .lsrw-grid { grid-template-columns: 1fr; }
+  .track-card.lang-lab-card { padding: 26px 22px; }
+  .track-card.lang-lab-card h3 { font-size: 18.5px; }
 }
 
 /* ===== FAQ ACCORDION (Career) ===== */
