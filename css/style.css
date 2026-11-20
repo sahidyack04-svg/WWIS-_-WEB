@@ -16,7 +16,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: var(--text);
   background: #fff;
 }
@@ -598,7 +598,7 @@ footer::before {
 }
 .image-holder svg { width: 40px; height: 40px; fill: none; stroke: var(--navy); stroke-width: 1.5; }
 .image-holder span { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .3px; }
-.image-holder small { font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 11.5px; opacity: .8; }
+.image-holder small { font-family: 'Nunito', sans-serif; font-weight: 500; font-size: 11.5px; opacity: .8; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
@@ -669,3 +669,118 @@ footer::before {
   .post-detail-head h1 { font-size: 26px; }
 }
 
+
+/* =====================================================================
+   EDITORIAL TYPE + IMAGE LAYER (inspired by innovat.news brief styling)
+   Typography: Nunito (headings 900, tight tracking) + DM Mono labels.
+   Images: rounded frames, cover crop, dot texture + soft scrim, hover zoom.
+   NOTE: no brand colors changed — only existing vars / white / navy alpha.
+   ===================================================================== */
+:root { --font-sans: 'Nunito', sans-serif; --font-mono: 'DM Mono', ui-monospace, monospace; }
+
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+p, li { line-height: 1.6; }
+
+/* Headings: heavy, tight, editorial */
+h1, h2, h3 { font-family: var(--font-sans); font-weight: 900; letter-spacing: -0.02em; }
+h1 { letter-spacing: -0.03em; line-height: 1.04; }
+.hero-text h1 { font-size: 52px; line-height: 1.04; }
+.page-header h1 { font-size: 44px; line-height: 1.06; }
+.feature-block h2 { font-weight: 900; letter-spacing: -0.03em; line-height: 1.04; }
+.welcome-text h2.two-tone, .programs h2.two-tone, .gallery h2.two-tone,
+.events h2.two-tone, .events-detail h2.two-tone, .blog h2.two-tone,
+.storybook-text h2.two-tone { font-size: 36px; line-height: 1.08; }
+.program-card .program-bar h3, .track-card h3, .blog-card h3,
+.event-card .event-info h3, .storybook-text h3, .ilp-strip h2,
+.faq-item summary, .feature-block .stat-num { font-weight: 900; letter-spacing: -0.02em; }
+nav a { font-weight: 700; }
+.btn, .blog-card a.read-more, .tab-btn { font-family: var(--font-sans); font-weight: 800; }
+
+/* Labels / eyebrows / tags → DM Mono, tracked uppercase */
+.section-label, .hero-text .tag, .blog-card .blog-category, .post-detail-cat,
+.feature-block .grade-tag, .badge, .event-card .event-info .date,
+.event-card .event-info .time, .post-detail-meta, .feature-block .stat-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.section-label { font-size: 11.5px; }
+.hero-text .tag { font-size: 11px; border-radius: 6px; padding: 6px 12px; }
+.feature-block .grade-tag, .blog-card .blog-category { font-size: 11px; border-radius: 6px; padding: 5px 10px; }
+.blog-card .blog-category { padding-left: 0; }
+.badge { font-size: 11px; border-radius: 6px; }
+.showcase-caption { font-weight: 900; letter-spacing: -0.01em; border-radius: 6px; }
+
+/* ---------- Images: shared frame treatment ---------- */
+.photo-frame, .program-card .program-photo, .blog-card .blog-photo,
+.event-card .event-photo, .feature-block .photo, .showcase-main, .storybook-photo .photo-frame {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.welcome-photo .photo-frame, .storybook-photo .photo-frame, .showcase-main { border-radius: 16px; }
+.blog-card .blog-photo { border-radius: 16px; }
+.feature-block .photo img { border-radius: 16px; }
+
+/* Cover-cropped photos: subtle dot texture + bottom scrim (innovat-style) */
+.welcome-photo .photo-frame:not(.team-photo-frame)::after,
+.program-card .program-photo::after,
+.blog-card .blog-photo::after,
+.feature-block .photo:not(:has(video))::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.14) 1px, transparent 1.3px) 0 0 / 16px 16px,
+    linear-gradient(180deg, rgba(10, 61, 98, 0) 55%, rgba(10, 61, 98, 0.28) 100%);
+}
+
+/* Smooth hover zoom on cover photos */
+.welcome-photo .photo-frame:not(.team-photo-frame) img,
+.program-card .program-photo img,
+.blog-card .blog-photo img,
+.feature-block .photo img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+.welcome-photo .photo-frame:not(.team-photo-frame):hover img,
+.program-card:hover .program-photo img,
+.blog-card:hover .blog-photo img,
+.feature-block .photo:hover img { transform: scale(1.045); }
+
+/* Cards lift slightly, like innovat's tap/hover feedback */
+.program-card, .blog-card, .event-card, .event-poster-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.program-card:hover, .blog-card:hover, .event-card:hover, .event-poster-card:hover { transform: translateY(-4px); }
+
+/* Gallery thumbnails: tighter radius, mono-like crisp border */
+.showcase-thumb { border-radius: 8px; }
+.post-detail-body > img, .post-detail-gallery img, .event-poster-card .poster-frame img { border-radius: 16px; }
+
+/* Hero entrance: staggered fade-up (transform/opacity only) */
+@keyframes ed-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.hero-text > * { animation: ed-rise 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.hero-text > :nth-child(2) { animation-delay: 80ms; }
+.hero-text > :nth-child(3) { animation-delay: 160ms; }
+.hero-text > :nth-child(4) { animation-delay: 240ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text > * { animation: none; }
+  .program-card, .blog-card, .event-card, .event-poster-card,
+  .program-card .program-photo img, .blog-card .blog-photo img,
+  .feature-block .photo img, .welcome-photo .photo-frame img { transition: none; }
+  .program-card:hover, .blog-card:hover, .event-card:hover, .event-poster-card:hover,
+  .program-card:hover .program-photo img, .blog-card:hover .blog-photo img,
+  .feature-block .photo:hover img, .welcome-photo .photo-frame:hover img { transform: none; }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 { font-size: 36px; }
+  .page-header h1 { font-size: 32px; }
+  .welcome-text h2.two-tone, .programs h2.two-tone, .gallery h2.two-tone,
+  .events h2.two-tone, .events-detail h2.two-tone, .blog h2.two-tone,
+  .storybook-text h2.two-tone { font-size: 28px; }
+}
